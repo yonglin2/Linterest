@@ -19,5 +19,3 @@ remove board id from pins
 board {
 remove board id from pins
 }
-
-npm install --save webpack react react-dom react-router redux react-redux redux-thunk babel-core babel-loader babel-preset-react babel-preset-es2015
