@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuestSubmit = this.handleGuestSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -29,12 +30,26 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  handleGuestSubmit(e) {
+    e.preventDefault();
+    console.log("hi");
+    const user = {
+      username: "guest",
+      password: "password"
+    };
+    this.props.guestLogin(user);
+  }
+
   navLink() {
     if (this.props.formType === 'login') {
       return <Link to="/signup">sign up instead</Link>;
     } else {
       return <Link to="/login">log in instead</Link>;
     }
+  }
+
+  capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
   renderErrors() {
@@ -50,6 +65,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    console.log(typeof this.props.formType);
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -73,9 +89,10 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input type="submit" value={this.props.formType} />
+            <input type="submit" value={this.capitalize(this.props.formType)} />
           </div>
         </form>
+        <button onClick={this.handleGuestSubmit}>Demo</button>
       </div>
     );
   }
