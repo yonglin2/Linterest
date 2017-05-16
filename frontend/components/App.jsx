@@ -17,10 +17,10 @@ const App = () => (
     <Link to="/" className="header-link">
       <h1>Linterest</h1>
     </Link>
-    <GreetingContainer />
       <Switch>
        <AuthRoute path="/login" component={SessionFormContainer} />
        <AuthRoute path="/signup" component={SessionFormContainer} />
+       <Route path="/" component={GreetingContainer} />
      </Switch>
   </div>
 );
