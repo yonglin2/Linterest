@@ -5,7 +5,7 @@
 * [Heroku Link][heroku]
 * [Trello Link][trello]
 
-[heroku]: https://dashboard.heroku.com/apps
+[heroku]: https://linterest.herokuapp.com/
 [trello]: https://trello.com/b/fcO5rEb5/linterest
 
 Linterest is a web app inspired by Pinterest built with React/Redux and Ruby on Rails. Its MVPs are:
@@ -26,11 +26,11 @@ Linterest is a web app inspired by Pinterest built with React/Redux and Ruby on 
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+[wireframes]: wireframes
+[components]: component-hierarchy.md
+[sample-state]: sample-state.md
+[api-endpoints]: api-endpoints.md
+[schema]: schema.md
 
 ## Implementation Timeline
 
