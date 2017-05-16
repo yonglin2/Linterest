@@ -5,7 +5,7 @@
     username: "app-academy"
   },
 
-  forms: {
+  errors: {
     signUp: {errors: []},
     logIn: {errors: []},
     createBoard: {errors: []}
