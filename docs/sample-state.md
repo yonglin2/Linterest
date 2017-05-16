@@ -1,15 +1,12 @@
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: "app-academy"
-  },
-
-  errors: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createBoard: {errors: []}
-  },
+  session: {
+    currentUser: {
+      id: 1,
+      username: "app-academy"
+    },
+    errors: []
+  }
 
   pins: {
     3: {
@@ -17,7 +14,9 @@
       image_url: "www.imgur.com",
       description: "Everybody has a photo of this."
       board_id: []
-    }
+    },
+
+    errors: []
   },
 
   boards: {
@@ -33,7 +32,9 @@
           board_id: [1, 3]
         }
       ]
-    }
+    },
+
+    errors: []
   },
 
   follows: {
