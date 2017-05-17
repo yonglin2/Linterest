@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <section className="login-form-container tint">
+      <section className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           {this.renderErrors()}
           <div className="login-form">
