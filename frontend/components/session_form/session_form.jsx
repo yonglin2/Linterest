@@ -32,7 +32,6 @@ class SessionForm extends React.Component {
 
   handleGuestSubmit(e) {
     e.preventDefault();
-    console.log("hi");
     const user = {
       username: "guest",
       password: "password"

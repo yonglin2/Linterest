@@ -5,7 +5,7 @@
 .login-form-container {
   top: 0px;
   left: 0px;
-  height: 1000px;
+  height: 100%;
   width: 100%;
   background-image: url(https://static1.squarespace.com/static/51c748abe4b0c275d0aa86bf/56141631e4b0095d43132f02/5614164ae4b018c0454fd5e0/1444744691618/patagonia-cinemagraph.gif?format=1000w);
   background-size: cover;
@@ -19,7 +19,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +48,7 @@
   width: 100%;
   box-shadow: none;
   font-weight: bold;
+  font-size: 13px;
   background-color: #f0f0f0;
   outline: none;
   border-radius: 3px;
