@@ -101,7 +101,7 @@ class SessionForm extends React.Component {
                 { this.navLink() }
               </span>
               <footer className="privacy-footer">
-                <a href=''>Terms of Service and Privacy Policy</a>
+                <a href='#'>Terms of Service and Privacy Policy</a>
               </footer>
             </div>
           </form>
