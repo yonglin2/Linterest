@@ -27,8 +27,8 @@
 
 .login-form-box {
   background: white;
-  height: 350px;
-  width: 350px;
+  height: 450px;
+  width: 450px;
   border-radius: 3px;
   display: flex;
   justify-content: center;
@@ -37,6 +37,16 @@
 .fa.fa-pinterest{
   color: $logo-red;
   font-size: 50px;
+}
+
+.login-welcome {
+  color: $dark-gray;
+  font-weight: bold;
+}
+
+.login-tagline {
+  color: $light-gray;
+  font-weight: bold;
 }
 
 .login-form {
