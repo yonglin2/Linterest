@@ -68,6 +68,7 @@ class SessionForm extends React.Component {
       <section className="login-form-container">
         <div className="tint">
           <form onSubmit={this.handleSubmit} className="login-form-box">
+            <i class="fa fa-pinterest" aria-hidden="true">feaw</i>
             <div className="login-form">
               <div className="login-input-container">
                 <input type="text"
@@ -92,7 +93,6 @@ class SessionForm extends React.Component {
             </div>
           </form>
         </div>
-        <footer>KEVIN BURG AND JAMIE BECK</footer>
       </section>
     );
   }
