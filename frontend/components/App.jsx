@@ -14,9 +14,6 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div className="main">
-    <Link to="/" className="header-link">
-      <h1>Linterest</h1>
-    </Link>
       <Switch>
        <AuthRoute path="/login" component={SessionFormContainer} />
        <AuthRoute path="/signup" component={SessionFormContainer} />

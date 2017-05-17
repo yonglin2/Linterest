@@ -67,26 +67,28 @@ class SessionForm extends React.Component {
   render() {
     return (
       <section className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          {this.renderErrors()}
-          <div className="login-form">
-            <input type="text"
-              placeholder="Username"
-              value={this.state.username}
-              onChange={this.update('username')}
-              className="login-input"
-            />
-            <input type="password"
-              placeholder="Password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className="login-input"
-            />
-            <input type="submit" value={this.capitalize(this.props.formType)} />
-            <button onClick={this.handleGuestSubmit}>Demo</button>
-            {this.navLink()}
-          </div>
-        </form>
+        <div className="tint">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            <div className="login-form">
+              <input type="text"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="login-input"
+              />
+              <input type="password"
+                placeholder="Password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="login-input"
+              />
+            <span className="session-errors">{this.renderErrors()}</span>
+            <button className="session-button" onClick={this.handleGuestSubmit}>Demo</button>
+              <input className="session-button" type="submit" value={this.capitalize(this.props.formType)} />
+              {this.navLink()}
+            </div>
+          </form>
+        </div>
       </section>
     );
   }

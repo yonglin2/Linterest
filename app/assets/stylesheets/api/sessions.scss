@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .login-form-container {
-  height: 900px;
+  height: 1040px;
   width: 100%;
   background-image: url(http://i.imgur.com/mR77vaQ.gif);
   background-size: cover;
@@ -24,15 +24,42 @@
 
 .login-form-box {
   background: white;
-  height: 250px;
-  width: auto;
-  border-radius: 5px;
+  height: 350px;
+  width: 350px;
+  border-radius: 3px;
   display: flex;
+  justify-content: center;
 }
 
 .login-form {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  // align-items: center;
+  align-items: center;
   justify-content: space-around;
+}
+
+.login-input {
+  margin-top: 15px;
+  height: 20px;
+  width: 100%;
+  box-shadow: none;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  outline: none;
+  border-radius: 3px;
+}
+
+.session-button {
+  background: #bd081c;
+  color: white;
+  height: 20px;
+  width: 100%;
+  border-radius: 3px;
+  border: 0;
+  padding: 0;
+}
+
+.session-button:hover {
+  opacity: 0.8;
 }
