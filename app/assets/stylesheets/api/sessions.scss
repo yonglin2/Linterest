@@ -1,3 +1,38 @@
 // Place all the styles related to the Api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-form-container {
+  height: 900px;
+  width: 100%;
+  background-image: url(http://i.imgur.com/mR77vaQ.gif);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tint {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.login-form-box {
+  background: white;
+  height: 250px;
+  width: auto;
+  border-radius: 5px;
+  display: flex;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: space-around;
+}

@@ -13,7 +13,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
+  <div className="main">
     <Link to="/" className="header-link">
       <h1>Linterest</h1>
     </Link>
