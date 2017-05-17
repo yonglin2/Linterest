@@ -70,25 +70,30 @@ class SessionForm extends React.Component {
         <div className="tint">
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <div className="login-form">
-              <input type="text"
-                placeholder="Username"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-              <input type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            <span className="session-errors">{this.renderErrors()}</span>
-            <button className="session-button" onClick={this.handleGuestSubmit}>Demo</button>
+              <div className="login-input-container">
+                <input type="text"
+                  placeholder="Username"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                />
+                <input type="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+              </div>
+            <div className="session-button-container">
+              <span className="session-errors">{this.renderErrors()}</span>
+              <button className="session-button" onClick={this.handleGuestSubmit}>Demo</button>
               <input className="session-button" type="submit" value={this.capitalize(this.props.formType)} />
+            </div>
               {this.navLink()}
             </div>
           </form>
         </div>
+        <footer>KEVIN BURG AND JAMIE BECK</footer>
       </section>
     );
   }

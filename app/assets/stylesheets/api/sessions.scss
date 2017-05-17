@@ -3,23 +3,26 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .login-form-container {
-  height: 1040px;
+  top: 0px;
+  left: 0px;
+  height: 1000px;
   width: 100%;
-  background-image: url(http://i.imgur.com/mR77vaQ.gif);
+  background-image: url(https://static1.squarespace.com/static/51c748abe4b0c275d0aa86bf/56141631e4b0095d43132f02/5614164ae4b018c0454fd5e0/1444744691618/patagonia-cinemagraph.gif?format=1000w);
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
 }
 
 .tint {
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-form-box {
@@ -41,7 +44,7 @@
 
 .login-input {
   margin-top: 15px;
-  height: 20px;
+  height: 30px;
   width: 100%;
   box-shadow: none;
   font-weight: bold;
@@ -50,16 +53,26 @@
   border-radius: 3px;
 }
 
+.session-button-container {
+  width: 100%;
+  flex-direction: column;
+}
+
 .session-button {
   background: #bd081c;
   color: white;
-  height: 20px;
+  height: 30px;
   width: 100%;
   border-radius: 3px;
   border: 0;
   padding: 0;
+  margin-bottom: 10px;
 }
 
 .session-button:hover {
   opacity: 0.8;
+}
+
+footer {
+  color: black;
 }
