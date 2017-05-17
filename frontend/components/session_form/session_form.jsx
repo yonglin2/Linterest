@@ -41,9 +41,9 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">Sign up</Link>;
+      return <Link to="/signup">Sign Up Instead</Link>;
     } else {
-      return <Link to="/login">Login</Link>;
+      return <Link to="/login">Login Instead</Link>;
     }
   }
 
@@ -71,7 +71,7 @@ class SessionForm extends React.Component {
             <div className="login-form">
               <i className="fa fa-pinterest" aria-hidden="true"></i>
               <h2 className="login-welcome">Welcome to Linterest</h2>
-              <h4 className="login-tagline">My catalog of ideas</h4>
+              <h4 className="login-tagline">Your catalog of ideas</h4>
               <div className="login-input-container">
                 <input type="text"
                   placeholder="Username"
@@ -86,12 +86,23 @@ class SessionForm extends React.Component {
                   className="login-input"
                 />
               </div>
+              <span className="session-errors">
+                {this.renderErrors()}
+              </span>
             <div className="session-button-container">
-              <span className="session-errors">{this.renderErrors()}</span>
-              <button className="session-button" onClick={this.handleGuestSubmit}>Demo</button>
-              <input className="session-button" type="submit" value={this.capitalize(this.props.formType)} />
+              <button className="session-button"
+                onClick={this.handleGuestSubmit}>Demo</button>
+              <input className="session-button"
+                type="submit"
+                value={this.capitalize(this.props.formType)}
+              />
             </div>
-              {this.navLink()}
+              <span className="navLink">
+                { this.navLink() }
+              </span>
+              <footer className="privacy-footer">
+                <a href=''>Terms of Service and Privacy Policy</a>
+              </footer>
             </div>
           </form>
         </div>
