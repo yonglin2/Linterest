@@ -68,8 +68,8 @@ class SessionForm extends React.Component {
       <section className="login-form-container">
         <div className="tint">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            <i class="fa fa-pinterest" aria-hidden="true">feaw</i>
             <div className="login-form">
+              <i className="fa fa-pinterest" aria-hidden="true"></i>
               <div className="login-input-container">
                 <input type="text"
                   placeholder="Username"
