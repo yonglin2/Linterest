@@ -1,4 +1,3 @@
-Schema
 
 new table pinnings
 pinnings belongs to board
@@ -22,4 +21,6 @@ remove board id from pins
 
 credit cinemagraphs.com
 
+bonus:
 make loading spinner appear in login
+better logo
