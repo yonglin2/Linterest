@@ -1,0 +1,45 @@
+.nav-bar {
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $light-gray;
+}
+
+.left-nav {
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa.fa-pinterest.nav-logo{
+  font-size: 30px;
+}
+
+.mid-nav {
+  background: $light-gray;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-greeting {
+  margin: 5px 0px;
+  font-size: 30px;
+  justify-content: center;
+  color: $dark-gray;
+}
+
+.right-nav {
+  width: 10%;
+  font-size: 30px;
+  color: $gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fa.fa-sign-out:hover{
+  cursor: pointer;
+}
