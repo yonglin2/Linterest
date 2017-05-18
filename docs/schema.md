@@ -15,7 +15,7 @@ session_token   | string    | null: false, index: true, unique: true
 column name   | data type | details
 --------------|-----------|-----------------------
 id            | integer   | null: false, primary key
-title         | string    | null: false
+name          | string    | null: false
 description   | text      |
 image_url     | string    | null: false
 
@@ -23,7 +23,7 @@ image_url     | string    | null: false
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | null: false, primary key
-name        | string    | null: false
+title        | string    | null: false
 description | string    |
 user_id     | integer   | null: false, foreign key (references users), index: true
 pinning_id  | integer   | null: false,

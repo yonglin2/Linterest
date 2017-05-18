@@ -13,7 +13,6 @@
       name: "Yosemite",
       image_url: "www.imgur.com",
       description: "Everybody has a photo of this."
-      board_id: []
     },
 
     errors: []
