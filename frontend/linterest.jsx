@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.store = store;
   const root = document.getElementById('root');
-  ReactDOM.render(<h2>HI</h2>, root);
+  ReactDOM.render(<Root store={store} />, root);
 });
 
 // TODO: remove after testing
