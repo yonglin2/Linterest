@@ -1,5 +1,7 @@
 import React from 'react';
 import PinsIndexItem from './pins_index_item';
+import Masonry from 'react-masonry-component';
+import PinModal from '../modal/pin_modal';
 
 class PinsIndex extends React.Component {
   constructor(props) {
@@ -12,19 +14,28 @@ class PinsIndex extends React.Component {
 
   render() {
     let { pins } = this.props;
+    let masonryOptions = {
+      transitionDuration: 2,
+      gutter: 15,
+      fitWidth: true
+    };
     return (
-      <section className="pins-index-container">
-        <ul className="pins-index">
-          {
-            pins.map( (pin) => {
-              return (
-                <PinsIndexItem key={ pin.id }
-                               pin ={ pin }>
-                </PinsIndexItem>);
-            })
-          }
-        </ul>
-      </section>
+          <Masonry className={"pins-index-container"}
+            elementType={'ul'}
+            options={masonryOptions}
+            disableImagesLoaded={false}
+            updateOnEachImageLoad={false}
+            >
+              {
+                pins.map( (pin) => {
+                  return (
+                    <PinModal key={ pin.id }
+                      pin={ pin }>
+                    </PinModal>);
+                  })
+                }
+            </Masonry>
+
     );
   }
 }
