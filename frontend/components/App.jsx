@@ -9,16 +9,18 @@ import {
 } from 'react-router-dom';
 
 import NavContainer from './nav/nav_container';
+import PinsIndexContainer from './pins/pins_index_container';
 import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div className="main">
-      <Switch>
-       <AuthRoute path="/login" component={SessionFormContainer} />
-       <AuthRoute path="/signup" component={SessionFormContainer} />
-       <ProtectedRoute path="/" component={NavContainer} />
-     </Switch>
+    <ProtectedRoute path="/" component={NavContainer} />
+    <Switch>
+      <AuthRoute path="/login" component={SessionFormContainer} />
+      <AuthRoute path="/signup" component={SessionFormContainer} />
+      <ProtectedRoute path="/" component={PinsIndexContainer} />
+    </Switch>
   </div>
 );
 

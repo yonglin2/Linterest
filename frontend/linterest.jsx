@@ -20,14 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TODO: remove after testing
-// import * as APIUtil from './util/session_api_util';
-//
-// window.signup = APIUtil.signup;
-// window.login = APIUtil.login;
-// window.logout = APIUtil.logout;
+import { requestSinglePin, requestAllPins } from './actions/pin_actions';
 
-import {signup, login, logout } from './actions/session_actions';
+window.requestAllPins = requestAllPins;
+window.requestSinglePin = requestSinglePin;
 
-window.signup = signup;
-window.login = login;
-window.logout = logout;
+import { selectAllPins } from './reducers/selectors';

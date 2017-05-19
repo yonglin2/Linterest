@@ -1,3 +1,17 @@
 // Place all the styles related to the api/pins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pins-index-container {
+}
+
+.pins-index {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.pins-index-item {
+  height: auto;
+  width: 300px;
+  display: block;
+}
