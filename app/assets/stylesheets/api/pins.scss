@@ -8,17 +8,15 @@
   margin: 0 auto;
 }
 
-.pins-index-item {
+.pins-modal-item {
   width: 250px;
   margin-bottom: 15px;
-  border-radius: 20px;
 }
 
-.pins-index-item:hover {
-  cursor: pointer;
+.pins-modal-item:hover {
   opacity: 0.6;
 }
 
-.pin-img {
+.pin-modal-img {
   border-radius: 3px;
 }

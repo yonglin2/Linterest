@@ -1,5 +1,5 @@
 import React from 'react';
-import PinsIndexItem from './pins_index_item';
+// import PinsIndexItem from './pins_index_item';
 import Masonry from 'react-masonry-component';
 import PinModal from '../modal/pin_modal';
 
@@ -15,10 +15,11 @@ class PinsIndex extends React.Component {
   render() {
     let { pins } = this.props;
     let masonryOptions = {
-      transitionDuration: 2,
+      transitionDuration: 0,
       gutter: 15,
       fitWidth: true
     };
+    
     return (
           <Masonry className={"pins-index-container"}
             elementType={'ul'}
