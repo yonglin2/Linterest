@@ -2,16 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.pins-index-container {
-}
 
-.pins-index {
-  display: flex;
-  flex-flow: row wrap;
+.pins-index-container {
+  padding-top: 30px;
+  margin: 0 auto;
 }
 
 .pins-index-item {
-  height: auto;
-  width: 300px;
-  display: block;
+  width: 250px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+}
+
+.pins-index-item:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.pin-img {
+  border-radius: 3px;
 }

@@ -1,4 +1,4 @@
-import values from 'lodash/values';
+import {values, toArray} from 'lodash';
 
 export const selectAllPins = (pins) => {
   return values(pins);
