@@ -1,5 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
+import PinShowContainer from '../pins/pin_show_container';
+import { Link } from 'react-router-dom';
 
 const style = {
   overlay : {
@@ -12,14 +14,18 @@ const style = {
     zIndex          : 10
   },
   content : {
-    position        : 'fixed',
-    top             : '100px',
-    left            : '150px',
-    right           : '150px',
-    bottom          : '100px',
+    display         : 'flex',
+    "justify-content" : 'center',
+    // position        : 'fixed',
+    // top             : '100px',
+    left            : '30%',
+    right           : '30%',
+    // bottom          : '100px',
     border          : '1px solid #ccc',
-    padding         : '20px',
-    zIndex          : 11
+    padding         : '10px',
+    zIndex          : 11,
+    opacity         : 0,
+    transition      : 'opacity 0.4s'
   }
 };
 
@@ -37,28 +43,34 @@ class PinModal extends React.Component {
 
   closeModal() {
     this.setState({ modalOpen: false });
+    style.content.opacity = 0;
   }
 
   openModal() {
     this.setState({ modalOpen: true });
   }
 
+  afterModalOpen() {
+    style.content.opacity = 100;
+  }
+
   render() {
+    let { pin } = this.props;
     return(
       <div>
-        <button className="pins-modal-item" onClick={this.openModal}>
-          <img className="pin-modal-img" src={this.props.pin.image_url}></img>
+        <button to={`/api/pins/${pin.id}`}
+          className="pins-modal-item"
+          onClick={this.openModal}>
+          <img className="pin-modal-img" src={pin.image_url}></img>
         </button>
         <Modal
           isOpen={this.state.modalOpen}
+          onAfterOpen={this.afterModalOpen}
           onRequestClose={this.closeModal}
           style = {style}
           contentLabel="Pin Modal">
 
-          <h2>Im a modal!</h2>
-          <p>modal modal modal modal modal</p>
-          <p>mooooooooodal!</p>
-
+          <PinShowContainer className='pin_show_container' id={pin.id} />
         </Modal>
       </div>
     );

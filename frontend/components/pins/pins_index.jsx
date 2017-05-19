@@ -16,10 +16,9 @@ class PinsIndex extends React.Component {
     let { pins } = this.props;
     let masonryOptions = {
       transitionDuration: 0,
-      gutter: 15,
+      gutter: 25,
       fitWidth: true
     };
-    
     return (
           <Masonry className={"pins-index-container"}
             elementType={'ul'}

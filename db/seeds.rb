@@ -16,3 +16,4 @@ pin7 = Pin.create!(name: "desert", description: "dry", image_url: "https://s-med
 pin8 = Pin.create!(name: "lake", description: "a sliver", image_url: "https://s-media-cache-ak0.pinimg.com/564x/9c/5e/f4/9c5ef4906dd12535dde76234af059a11.jpg")
 pin9 = Pin.create!(name: "dark mountain", description: "dawn or dusk?", image_url: "https://s-media-cache-ak0.pinimg.com/564x/5d/af/d7/5dafd762fafa1d649867d1189c66205d.jpg")
 pin10 = Pin.create!(name: "single swan", description: "real swan?", image_url: "https://s-media-cache-ak0.pinimg.com/564x/51/82/0a/51820a25d9d105138e6e97a6fe4f3c66.jpg")
+pin11 = Pin.create!(name: "tomatoes", description: "super red and ripe", image_url: "http://farm4.static.flickr.com/3605/5739526869_e47d3616f3_o.gif")

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  # protect_from_forgery with: :exception
+  protect_from_forgery with: :exception
   helper_method :current_user, :logged_in?
 
   private
@@ -26,7 +26,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_logged_in
-    # TODO: make sure this will match my state shape
     render json: {base: ['invalid credentials']}, status: 401 if !current_user
   end
 end

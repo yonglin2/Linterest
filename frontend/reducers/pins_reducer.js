@@ -9,7 +9,7 @@ const PinsReducer = (state = {}, action) => {
     case RECEIVE_ALL_PINS:
       return action.pins;
     case RECEIVE_SINGLE_PIN:
-      return merge({}, state, action.pin);
+      return Object.assign({}, state, {[action.pin.id]: action.pin});
     default:
       return state;
   }
