@@ -8,7 +8,7 @@ class Footer extends React.Component {
   render() {
     return (
       <button className="footer-create-button fa fa-plus"
-        aria-hidden="true">sdaf
+        aria-hidden="true">
       </button>
     );
   }

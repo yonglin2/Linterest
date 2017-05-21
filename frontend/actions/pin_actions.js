@@ -22,3 +22,8 @@ export const requestSinglePin = (id) => (dispatch) => {
   return APIUtil.fetchSinglePin(id)
   .then(pin => dispatch(receiveSinglePin(pin)));
 };
+
+export const createPin = (pin) => (dispatch) => {
+  return APIUtil.createPin(pin)
+  .then(newPin => dispatch(receiveSinglePin(newPin)));
+};

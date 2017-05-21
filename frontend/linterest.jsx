@@ -20,6 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TODO: remove after testing
-import { createPin } from './util/pin_api_util';
-
+import { createPin } from './actions/pin_actions';
 window.createPin = createPin;

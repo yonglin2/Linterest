@@ -20,7 +20,6 @@ class Api::PinsController < ApplicationController
   end
 
   def update
-    # TODO: implement later
   end
 
   def destroy
