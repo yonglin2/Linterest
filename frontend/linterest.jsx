@@ -20,9 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TODO: remove after testing
-import { requestSinglePin, requestAllPins } from './actions/pin_actions';
+import { createPin } from './util/pin_api_util';
 
-window.requestAllPins = requestAllPins;
-window.requestSinglePin = requestSinglePin;
-
-import { selectAllPins } from './reducers/selectors';
+window.createPin = createPin;

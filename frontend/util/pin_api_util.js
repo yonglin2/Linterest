@@ -11,3 +11,11 @@ export const fetchSinglePin = (pinId) => {
     url: `api/pins/${pinId}`
   });
 };
+
+export const createPin = (pin) => {
+  $.ajax({
+    method: 'POST',
+    url: 'api/pins',
+    data: { pin }
+  });
+};
