@@ -11,6 +11,7 @@ import {
 import NavContainer from './nav/nav_container';
 import PinsIndexContainer from './pins/pins_index_container';
 import SessionFormContainer from './session_form/session_form_container';
+import FooterContainer from './footer/footer_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -21,6 +22,7 @@ const App = () => (
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/" component={PinsIndexContainer} />
     </Switch>
+    <ProtectedRoute path="/" component={FooterContainer} />
   </div>
 );
 

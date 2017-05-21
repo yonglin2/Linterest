@@ -7,13 +7,9 @@ class Nav extends React.Component {
     super(props);
   }
 
-  
-
   render() {
     let {currentUser} = this.props;
     return(
-      <main>
-
         <nav className="nav-bar">
           <div className="left-nav">
             <Link to="/">
@@ -37,10 +33,6 @@ class Nav extends React.Component {
             </i>
           </div>
         </nav>
-        <button className="nav-create-button fa fa-plus"
-          aria-hidden="true">
-        </button>
-      </main>
     );
   }
 }
