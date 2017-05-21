@@ -60,6 +60,6 @@ the API.
 **Objective:** Add a discover feed to homepage.
 
 ### Bonus Features (TBD)
-- [ ] Search pins by content
 - [ ] Infinite scroll
+- [ ] Search pins by content
 - [ ] Comments

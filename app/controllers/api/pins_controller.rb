@@ -5,10 +5,12 @@ class Api::PinsController < ApplicationController
   end
 
   def create
+    @pin = Pin.new(pin_params)
+
     if @pin.save
       render :show
     else
-      render json: @pin.errors.full_messages, status: 400
+      render json: @pin.errors.full_messages, status: 422
     end
   end
 
