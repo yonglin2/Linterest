@@ -8,7 +8,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <footer>
+      <footer className="footer-main">
         <PinCreateModal />
 
         <button className="fa fa-github"

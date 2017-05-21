@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import PinShowContainer from '../pins/pin_show_container';
+import PinCreateFormContainer from '../pins/pin_create_form_container';
 
 const style = {
   overlay : {
@@ -9,17 +9,14 @@ const style = {
     left            : 0,
     right           : 0,
     bottom          : 0,
-    backgroundColor : 'rgba(255, 255, 255, 0.9)',
+    backgroundColor : 'rgba(0, 0, 0, 0.7)',
     zIndex          : 10
   },
   content : {
     display         : 'flex',
     "justify-content" : 'center',
-    // position        : 'fixed',
-    // top             : '100px',
     left            : '30%',
     right           : '30%',
-    // bottom          : '100px',
     border          : '1px solid #ccc',
     padding         : '10px',
     zIndex          : 11,
@@ -57,9 +54,9 @@ class PinCreateModal extends React.Component {
     return(
       <div>
         <button
-          className="pins-modal-item"
-          onClick={this.openModal}>sdfdfds
-          <img className="fa fa-plus"></img>
+          className=".footer-create-button"
+          onClick={this.openModal}>
+          <i className="fa fa-plus"></i>
         </button>
         <Modal
           isOpen={this.state.modalOpen}
@@ -68,7 +65,7 @@ class PinCreateModal extends React.Component {
           style = {style}
           contentLabel="Pin Create Modal">
 
-          <h2>sup</h2>
+          <PinCreateFormContainer />
         </Modal>
       </div>
     );

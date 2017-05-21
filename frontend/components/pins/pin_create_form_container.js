@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { createPin } from '../../actions/pin_actions';
-import PinCreateForm from './footer';
+import PinCreateForm from './pin_create_form';
 
 const mapStateToProps = ({ session }) => ({
   currentUser: session.currentUser
