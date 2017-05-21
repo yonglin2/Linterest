@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { createPin } from '../../actions/pin_actions';
-import Footer from './footer';
+import PinCreateForm from './footer';
 
 const mapStateToProps = ({ session }) => ({
   currentUser: session.currentUser
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Footer);
+)(PinCreateForm);

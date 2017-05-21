@@ -28,7 +28,7 @@ const style = {
   }
 };
 
-class PinModal extends React.Component {
+class PinCreateModal extends React.Component {
   constructor(props) {
     super(props);
 
@@ -54,26 +54,25 @@ class PinModal extends React.Component {
   }
 
   render() {
-    let { pin } = this.props;
     return(
       <div>
         <button
           className="pins-modal-item"
-          onClick={this.openModal}>
-          <img className="pin-modal-img" src={pin.image_url}></img>
+          onClick={this.openModal}>sdfdfds
+          <img className="fa fa-plus"></img>
         </button>
         <Modal
           isOpen={this.state.modalOpen}
           onAfterOpen={this.afterModalOpen}
           onRequestClose={this.closeModal}
           style = {style}
-          contentLabel="Pin Modal">
+          contentLabel="Pin Create Modal">
 
-          <PinShowContainer className='pin_show_container' id={pin.id} />
+          <h2>sup</h2>
         </Modal>
       </div>
     );
   }
 }
 
-export default PinModal;
+export default PinCreateModal;

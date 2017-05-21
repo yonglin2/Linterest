@@ -1,4 +1,5 @@
 import React from 'react';
+import PinCreateModal from '../modal/pin_create_modal';
 
 class Footer extends React.Component {
   constructor(props) {
@@ -7,9 +8,17 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <button className="footer-create-button fa fa-plus"
-        aria-hidden="true">
-      </button>
+      <footer>
+        <PinCreateModal />
+
+        <button className="fa fa-github"
+          aria-hidden="true">
+        </button>
+
+        <button className="fa fa-linkedin"
+          aria-hidden="true">
+        </button>
+      </footer>
     );
   }
 }
