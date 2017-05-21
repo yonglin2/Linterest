@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
 import PinShowContainer from '../pins/pin_show_container';
-import { Link } from 'react-router-dom';
 
 const style = {
   overlay : {
