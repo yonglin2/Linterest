@@ -1,11 +1,9 @@
 .footer-main {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
   height: 300px;
   z-index: 10;
   position: fixed;
-  display: inline-block;
   top: 75%;
   right: 2%;
 }
@@ -21,4 +19,8 @@
   &:hover {
     background-color: $gray;
   }
+}
+
+.fa.fa-plus {
+  color: $logo-red;
 }

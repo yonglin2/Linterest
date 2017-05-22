@@ -50,28 +50,44 @@ class PinCreateForm extends React.Component {
 
   render() {
     return (
-      <div className="upload-page">
-        <Dropzone multiple={false} accept="image/*"
+      <div className="create-form-container">
+        <h1>Create a pin!</h1>
+        <Dropzone
+            multiple={false}
+            accept="image/*"
             onDrop={this.handleImageDrop}
             className="create-form-dropzone">
             {
               this.state.image_url === "" ?
-                <div>
-                  <h3>Drag and Drop<br/>
-                    or </h3>
-                  <button>Click Here!</button>
+                <div className="dropzone-text-container">
+                  <h3>Drag and Drop</h3>
+                    <h4>or</h4>
+                  <h3>Click Here!</h3>
                 </div>
                 :
                 <img src={this.state.image_url} />
             }
         </Dropzone>
-        <br></br>
-        <form onSubmit={this.handleSubmit} className="upload-input-frame">
-          <h1 className="upload-input-left">Name</h1>
-          <input type="text" onChange={this.update('name')} value={this.state.name} className="upload-input-right"></input>
-          <h1 className="upload-input-left">Description</h1>
-          <input type="text" onChange={this.update('description')} value={this.state.description} className="upload-input-right"></input>
-          <input type="submit" value="Submit" className="upload-input-right-button"></input>
+        <form onSubmit={this.handleSubmit} className="create-form">
+          <label>
+            <h2>Name</h2>
+            <input type="text"
+              onChange={this.update('name')}
+              value={this.state.name}>
+            </input>
+          </label>
+
+          <label>
+            <h2>Description</h2>
+            <input type="textarea"
+              onChange={this.update('description')}
+              value={this.state.description}>
+            </input>
+          </label>
+
+          <input type="submit"
+            value="Submit"
+            className="create-form-submit-button"></input>
         </form>
 
       </div>

@@ -1,9 +1,62 @@
-.create-form-dropzone {
-  background: red;
-  width: 350px;
-  height: 350px;
+.create-form-container {
+  display: flex;
+  flex-direction: column;
+}
+.create-form-container h1 {
+  padding: 15px 0px;
+  font-size: 30px;
+  color: $dark-gray;
 }
 
-.upload-input {
-  border: 1px solid $dark-gray;
+.create-form-dropzone {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  color: $dark-gray;
+  background: $light-gray;
+  width: 350px;
+  height: 350px;
+  border: 1px dashed $dark-gray
+}
+
+.dropzone-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-form {
+  margin-top: 40px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.create-form h2 {
+  color: $dark-gray;
+  font-size: 20px;
+}
+
+.create-form input {
+  margin-top: 10px;
+  padding-left: 10px;
+  height: 33px;
+  width: 100%;
+  font-size: 13px;
+  background-color: $light-gray;
+  outline: none;
+  border-radius: 3px;
+}
+
+.create-form input[type="submit"] {
+  background: $logo-red;
+  color: white;
+  border-radius: 3px;
+  font-size: 15px;
+  &:hover {
+    opacity: 0.8;
+  }
 }
