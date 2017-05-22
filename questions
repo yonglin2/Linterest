@@ -1,7 +1,10 @@
 how come my random function didn't work? it has something to do with
 default value for array right?
 
-do i want users to be able to delete pins or just delete pinnings? when a user deletes in their board,
+do i want users to be able to delete pins or just delete pinnings?
+when a user deletes a pin in their board,
 it should just delete pinning right?
 
-how do 
+how do
+
+nav bar nested check

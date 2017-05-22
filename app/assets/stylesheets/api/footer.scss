@@ -1,10 +1,11 @@
 .footer-main {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  // height: 300px;
   z-index: 10;
   position: fixed;
-  top: 70%;
+  // top: 70%;
+  bottom: 20px;
   right: 2%;
 }
 
@@ -15,9 +16,10 @@
   color: $dark-gray;
   background: white;
   border-radius: 50%;
-  box-shadow: 0px 2px 0px $dark-gray;
+  border: 1px solid $light-gray;
+  box-shadow: 0px 2px 0px $gray;
   &:hover {
-    background-color: $gray;
+    background-color: $light-gray;
   }
 }
 

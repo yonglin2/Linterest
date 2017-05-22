@@ -20,5 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TODO: remove after testing
-import { createPin } from './actions/pin_actions';
-window.createPin = createPin;
+import { fetchUser } from './util/session_api_util';
+window.fetchUser = fetchUser;

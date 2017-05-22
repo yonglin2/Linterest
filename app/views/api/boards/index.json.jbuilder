@@ -1,1 +1,3 @@
-json.partial! "api/boards/post", board: @boards
+json.array!(@boards) do |board|
+  json.partial!('board', board: board)
+end

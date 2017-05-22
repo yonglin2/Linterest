@@ -7,13 +7,11 @@ import { randomizeAllPins } from '../../reducers/selectors';
 import Nav from './nav';
 
 const mapStateToProps = ({ session, pins }) => ({
-  currentUser: session.currentUser,
-  pins: randomizeAllPins(pins)
+  currentUser: session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout()),
-  requestAllPins: () => dispatch(requestAllPins())
+  logout: () => dispatch(logout())
 });
 
 export default connect(

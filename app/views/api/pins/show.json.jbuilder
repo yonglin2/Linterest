@@ -1,1 +1,1 @@
-json.extract! @pin, :id, :name, :description, :image_url
+json.partial!('api/pins/pin', pin: @pin)

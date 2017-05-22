@@ -5,11 +5,6 @@ import { Link } from 'react-router-dom';
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-    this.randomize = this.randomize.bind(this);
-  }
-
-  randomize() {
-    this.requestAllPins;
   }
 
   render() {
@@ -27,7 +22,7 @@ class Nav extends React.Component {
             </h2>
           </div>
           <div className="right-nav">
-            <button onClick={this.randomize}>
+            <button>
               <i className="fa fa-compass" aria-hidden="true"></i>
             </button>
             <Link to="/">

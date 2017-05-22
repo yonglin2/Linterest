@@ -50,7 +50,6 @@ class PinCreateForm extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="create-form-container">
         <h1>Create a pin!</h1>

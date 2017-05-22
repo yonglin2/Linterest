@@ -1,6 +1,7 @@
 import {values, toArray} from 'lodash';
 
 export const selectAllPins = (pins) => {
+  debugger;
   return (values(pins));
 };
 
