@@ -7,6 +7,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login(@user)
+      # create a new view to only render username/id instead of everything
       render "api/users/show"
     else
       render(

@@ -14,7 +14,7 @@ const style = {
   },
   content : {
     display         : 'flex',
-    "justify-content" : 'center',
+    justifyContent  : 'center',
     left            : '30%',
     right           : '30%',
     border          : '1px solid #ccc',

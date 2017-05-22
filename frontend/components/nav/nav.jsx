@@ -25,7 +25,7 @@ class Nav extends React.Component {
             <button>
               <i className="fa fa-compass" aria-hidden="true"></i>
             </button>
-            <Link to="/">
+            <Link to={`/users/${currentUser.id}`}>
               <i className="fa fa-user" aria-hidden="true"></i>
             </Link>
             <i className="fa fa-sign-out"
