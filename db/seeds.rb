@@ -18,3 +18,7 @@ pin9 = Pin.create!(name: "dark mountain", description: "dawn or dusk?", image_ur
 pin10 = Pin.create!(name: "single swan", description: "real swan?", image_url: "https://s-media-cache-ak0.pinimg.com/564x/51/82/0a/51820a25d9d105138e6e97a6fe4f3c66.jpg")
 pin11 = Pin.create!(name: "tomatoes", description: "super red and ripe", image_url: "http://farm4.static.flickr.com/3605/5739526869_e47d3616f3_o.gif")
 pin12 = Pin.create!(name: "cloudy mountains", description: "mysterious and majestic", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495237546/photo-1469053913977-1d2f009670d9_g55xsg.jpg")
+
+board1 = Board.create!(title: "board1", description: "test", user_id: 1)
+
+pinning1 = Pinning.create!(board_id: 1, pin_id: 1)
