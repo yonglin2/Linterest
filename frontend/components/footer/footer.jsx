@@ -10,14 +10,20 @@ class Footer extends React.Component {
     return (
       <footer className="footer-main">
         <PinCreateModal />
-
-        <button className="fa fa-github"
-          aria-hidden="true">
-        </button>
-
-        <button className="fa fa-linkedin"
-          aria-hidden="true">
-        </button>
+        <div>
+          <a href="https://github.com/lynilir/Linterest">
+            <button className="fa fa-github"
+              aria-hidden="true">
+            </button>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/yong-lin-565a5220">
+            <button className="fa fa-linkedin"
+              aria-hidden="true">
+            </button>
+          </a>
+        </div>
       </footer>
     );
   }

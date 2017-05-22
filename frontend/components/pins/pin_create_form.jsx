@@ -45,7 +45,6 @@ class PinCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const pin = this.state;
-    console.log(pin);
     this.props.createPin(pin);
   }
 
@@ -53,7 +52,8 @@ class PinCreateForm extends React.Component {
     return (
       <div className="upload-page">
         <Dropzone multiple={false} accept="image/*"
-            onDrop={this.handleImageDrop} className="upload-input-right-dropzone">
+            onDrop={this.handleImageDrop}
+            className="create-form-dropzone">
             {
               this.state.image_url === "" ?
                 <div>
