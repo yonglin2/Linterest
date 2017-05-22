@@ -23,10 +23,9 @@ image_url     | string    | null: false
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | null: false, primary key
-title        | string    | null: false
+title       | string    | null: false
 description | string    |
 user_id     | integer   | null: false, foreign key (references users), index: true
-pinning_id  | integer   | null: false,
 
 ## pinnings
 column name | data type | details
