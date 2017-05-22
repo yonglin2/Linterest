@@ -9,6 +9,11 @@ class User < ApplicationRecord
   has_many :pinnings, :through => :boards
   has_many :pins, :through => :pinnings
 
+  has_many :own_pins,
+    foreign_key: :user_id,
+    primary_key: :id,
+    class_name: "Pin"
+
   after_initialize :ensure_session_token
 
   def password=(password)

@@ -34,11 +34,12 @@ ActiveRecord::Schema.define(version: 20170522035016) do
   end
 
   create_table "pins", force: :cascade do |t|
-    t.string   "name",        null: false
-    t.string   "image_url",   null: false
+    t.string   "name",                      null: false
+    t.string   "image_url",                 null: false
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "user_id",     default: "1", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "users", force: :cascade do |t|
