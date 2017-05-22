@@ -6,7 +6,6 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: :true
 
   has_many :boards
-
   has_many :pinnings, :through => :boards
   has_many :pins, :through => :pinnings
 

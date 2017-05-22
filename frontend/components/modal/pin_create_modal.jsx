@@ -15,8 +15,8 @@ const style = {
   content : {
     display         : 'flex',
     "justify-content" : 'center',
-    left            : '35%',
-    right           : '35%',
+    left            : '30%',
+    right           : '30%',
     border          : '1px solid #ccc',
     padding         : '10px',
     zIndex          : 11,

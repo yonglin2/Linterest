@@ -20,22 +20,21 @@ class PinsIndex extends React.Component {
       fitWidth: true
     };
     return (
-          <Masonry className={"pins-index-container"}
-            elementType={'ul'}
-            options={masonryOptions}
-            disableImagesLoaded={false}
-            updateOnEachImageLoad={false}
-            >
-              {
-                pins.map( (pin) => {
-                  return (
-                    <PinModal key={ pin.id }
-                      pin={ pin }>
-                    </PinModal>);
-                  })
-                }
-            </Masonry>
-
+      <Masonry className={"pins-index-container"}
+        elementType={'ul'}
+        options={masonryOptions}
+        disableImagesLoaded={false}
+        updateOnEachImageLoad={false}
+        >
+        {
+          pins.map( (pin) => {
+            return (
+              <PinModal key={ pin.id }
+                pin={ pin }>
+              </PinModal>);
+            })
+          }
+      </Masonry>
     );
   }
 }
