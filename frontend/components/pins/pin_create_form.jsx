@@ -46,9 +46,11 @@ class PinCreateForm extends React.Component {
     e.preventDefault();
     const pin = this.state;
     this.props.createPin(pin);
+    this.props.closeModal();
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="create-form-container">
         <h1>Create a pin!</h1>

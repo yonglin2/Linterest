@@ -65,7 +65,7 @@ class PinCreateModal extends React.Component {
           style = {style}
           contentLabel="Pin Create Modal">
 
-          <PinCreateFormContainer />
+          <PinCreateFormContainer closeModal={this.closeModal} />
         </Modal>
       </div>
     );
