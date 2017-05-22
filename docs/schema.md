@@ -18,6 +18,7 @@ id            | integer   | null: false, primary key
 name          | string    | null: false
 description   | text      |
 image_url     | string    | null: false
+user_id       | string    | null: false, index: true (creator, references users)
 
 ## boards
 column name | data type | details

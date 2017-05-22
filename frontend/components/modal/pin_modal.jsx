@@ -14,12 +14,9 @@ const style = {
   },
   content : {
     display         : 'flex',
-    "justify-content" : 'center',
-    // position        : 'fixed',
-    // top             : '100px',
+    justifyContent  : 'center',
     left            : '20%',
     right           : '20%',
-    // bottom          : '100px',
     border          : '1px solid #ccc',
     padding         : '10px',
     zIndex          : 11,
