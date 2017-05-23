@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { NavLink, Link, withRouter } from 'react-router-dom';
 import { ProtectedRoute } from '../../util/route_util';
 
 class UserProfile extends React.Component {
@@ -29,17 +29,20 @@ class UserProfile extends React.Component {
         <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
         <p>{user.description}</p>
         <div>
-          <Link to={`${user.id}/pins`}>
+          <NavLink to={`/users/${user.id}/pins`}>
             <button>
               {ownPins.length} pins
             </button>
-          </Link>
+          </NavLink>
           <br></br>
-          <Link to={`${user.id}/boards`}>
+          <NavLink to={`/users/${user.id}/boards`}>
             <button>
               {boards.length} boards
             </button>
-          </Link>
+          </NavLink>
+          {boards.map((board)=>{
+            return (<li>{board.title}</li>);
+          })}
         </div>
       </div>
     );

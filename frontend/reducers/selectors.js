@@ -8,9 +8,6 @@ export const selectUserData = (data) => {
   return values(data);
 };
 
-
-
-
 export const randomizeAllPins = (pins) => {
   return shuffle(values(pins));
 };
