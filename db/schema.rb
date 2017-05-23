@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20170522035016) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["user_id"], name: "index_boards_on_user_id", unique: true, using: :btree
   end
 
   create_table "pinnings", force: :cascade do |t|
@@ -29,8 +28,7 @@ ActiveRecord::Schema.define(version: 20170522035016) do
     t.integer  "pin_id",     null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["board_id"], name: "index_pinnings_on_board_id", unique: true, using: :btree
-    t.index ["pin_id"], name: "index_pinnings_on_pin_id", unique: true, using: :btree
+    t.index ["board_id", "pin_id"], name: "pinnings boards", unique: true, using: :btree
   end
 
   create_table "pins", force: :cascade do |t|

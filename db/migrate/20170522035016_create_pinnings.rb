@@ -7,7 +7,7 @@ class CreatePinnings < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_index :pinnings, :board_id, unique: true
-    add_index :pinnings, :pin_id, unique: true
+    add_index :pinnings, [:board_id,:pin_id], unique:true, name: 'pinnings boards'
+
   end
 end
