@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   user: state.user,
   boards: state.user.boards,
-  own_pins: state.user.own_pins
+  ownPins: state.user.own_pins,
 });
 
 

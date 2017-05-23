@@ -6,7 +6,10 @@ const defaultUser = Object.freeze({
   id: null,
   username: "",
   image_url: null,
-  pins: []
+  pins: [],
+  own_pins: [],
+  description: "",
+  boards: []
 });
 
 const UserReducer = (state = defaultUser, action) => {

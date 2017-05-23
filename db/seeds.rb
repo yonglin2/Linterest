@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create!(username: "guest", password: "password")
-user2 = User.create!(username: "yong", password: "password")
+user1 = User.create!(username: "guest", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495485323/vhvr5jwtjouuzujpfzwh.png", description: "What's up, dog?")
+user2 = User.create!(username: "yong", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495351916/nrztsokinadfklw0sbuo.jpg", description: "Hire me!")
 
 pin1 = Pin.create!(name: "red beach", description: "Very red", image_url: "https://s-media-cache-ak0.pinimg.com/564x/7f/f2/3e/7ff23e3b39f581a72d8eee1979687ad3.jpg" )
 pin2 = Pin.create!(name: "moon branch", description: "Very serene", image_url: "https://s-media-cache-ak0.pinimg.com/564x/e6/98/a3/e698a38df6ac2e4e5802cc8e6d63ee75.jpg", user_id: 1)
@@ -22,6 +22,14 @@ pin10 = Pin.create!(name: "single swan", description: "real swan?", image_url: "
 pin11 = Pin.create!(name: "tomatoes", description: "super red and ripe", image_url: "http://farm4.static.flickr.com/3605/5739526869_e47d3616f3_o.gif", user_id: 1)
 pin12 = Pin.create!(name: "cloudy mountains", description: "mysterious and majestic", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495237546/photo-1469053913977-1d2f009670d9_g55xsg.jpg", user_id: 1)
 
-board1 = Board.create!(title: "board1", description: "test", user_id: 1)
+board1 = Board.create!(title: "board1", description: "test1", user_id: 1)
+board2 = Board.create!(title: "board2", description: "test2", user_id: 1)
+board3 = Board.create!(title: "board3", description: "test3", user_id: 1)
+board4 = Board.create!(title: "board4", description: "test4", user_id: 1)
+board5 = Board.create!(title: "yongboard", description: "yongdescription", user_id: 2)
 
 pinning1 = Pinning.create!(board_id: 1, pin_id: 1)
+pinning2 = Pinning.create!(board_id: 1, pin_id: 2)
+pinning3 = Pinning.create!(board_id: 1, pin_id: 3)
+pinning4 = Pinning.create!(board_id: 1, pin_id: 4)
+pinning5 = Pinning.create!(board_id: 5, pin_id: 4)

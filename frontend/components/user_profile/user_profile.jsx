@@ -19,10 +19,27 @@ class UserProfile extends React.Component {
   }
 
   render() {
+    let { user, ownPins, boards } = this.props;
     console.log(this.props);
-    let { currentUser, user } = this.props;
     return (
-      <h2>This is profile page of {user.username}</h2>
+      <div className="user-profile-container">
+        <h2>This is profile page of {user.username}</h2>
+        <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
+        <p>{user.description}</p>
+        <div>
+          <Link to={`${user.id}/pins`}>
+            <button>
+              {ownPins.length} pins
+            </button>
+          </Link>
+          <br></br>
+          <Link to={`${user.id}/boards`}>
+            <button>
+              {boards.length} boards
+            </button>
+          </Link>
+        </div>
+      </div>
     );
   }
 }
