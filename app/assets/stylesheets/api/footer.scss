@@ -10,6 +10,7 @@
 }
 
 .footer-main .fa {
+  transition: 0.5s;
   padding: 15px;
   margin-bottom: 15px;
   font-size: 20px;
@@ -19,7 +20,8 @@
   border: 1px solid $light-gray;
   box-shadow: 0px 2px 0px $gray;
   &:hover {
-    background-color: $light-gray;
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 6px $dark-gray;
   }
 }
 

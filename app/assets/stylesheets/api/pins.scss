@@ -21,25 +21,53 @@
   border-radius: 3px;
 }
 
-.pin_show_container {
-  margin-top: 20px;
+.pin-show-container {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.pin_show_title{
+.pin-show-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.pin-show-user-link {
+}
+
+.pin-show-user-img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.pin-show-title{
   font-size: 25px;
+  font-weight: bold;
   color: $dark-gray;
+
+}
+
+
+.pin-show-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pin-show-img {
   border-radius: 3px;
   margin: 15px;
+  height: auto;
+  width: 80%;
 }
 
-.pin_show_description {
+.pin-show-description {
   font-size: 15px;
   color: $dark-gray;
 }
