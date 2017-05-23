@@ -20,9 +20,11 @@ class UserProfile extends React.Component {
 
   render() {
     let { user, ownPins, boards } = this.props;
-    console.log(this.props);
     return (
       <div className="user-profile-container">
+        <button>
+          <i className="fa fa-pencil"></i>
+        </button>
         <h2>This is profile page of {user.username}</h2>
         <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
         <p>{user.description}</p>

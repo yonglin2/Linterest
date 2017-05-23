@@ -18,13 +18,12 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div className="main">
     <ProtectedRoute path="/" component={ NavContainer } />
-    <Switch>
-      <AuthRoute path="/login" component={ SessionFormContainer } />
-      <AuthRoute path="/signup" component={ SessionFormContainer } />
-      <ProtectedRoute path="/users/:userId" component={ UserProfileContainer } />
-      <ProtectedRoute path="/" component={ PinsIndexContainer } />
 
-    </Switch>
+    <ProtectedRoute exact path="/users/:userId" component={ UserProfileContainer } />
+    <AuthRoute path="/login" component={ SessionFormContainer } />
+    <AuthRoute path="/signup" component={ SessionFormContainer } />
+    <ProtectedRoute exact path="/" component={ PinsIndexContainer } />
+
     <ProtectedRoute path="/" component={ FooterContainer } />
   </div>
 );
