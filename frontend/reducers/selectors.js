@@ -4,6 +4,11 @@ export const selectAllPins = (pins) => {
   return (values(pins));
 };
 
+export const selectUserBoards = (boards) => {
+  return values(boards);
+};
+
+
 export const randomizeAllPins = (pins) => {
   return shuffle(values(pins));
 };

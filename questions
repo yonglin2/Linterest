@@ -8,3 +8,5 @@ it should just delete pinning right?
 how do
 
 nav bar nested check
+
+will changing a nested thing in parent slice of state cause re-render?

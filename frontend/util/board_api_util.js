@@ -1,4 +1,4 @@
-export const fetchSingleBoard = (boardId) => {
+export const fetchBoard = (boardId) => {
   return $.ajax({
     method: 'GET',
     url: `api/boards/${boardId}`
@@ -13,9 +13,9 @@ export const createBoard = (board) => {
   });
 };
 
-export const deleteBoard = (id) => (
+export const deleteBoard = (boardId) => (
   $.ajax({
     method: "DELETE",
-    url: `/api/boards/${id}`
+    url: `/api/boards/${boardId}`
   })
 );

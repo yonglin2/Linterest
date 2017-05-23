@@ -5,10 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+User.destroy_all
 user1 = User.create!(username: "guest", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495485323/vhvr5jwtjouuzujpfzwh.png", description: "What's up, dog?")
 user2 = User.create!(username: "yong", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495351916/nrztsokinadfklw0sbuo.jpg", description: "Hire me!")
 
+Pin.destroy_all
 pin1 = Pin.create!(name: "red beach", description: "Very red", image_url: "https://s-media-cache-ak0.pinimg.com/564x/7f/f2/3e/7ff23e3b39f581a72d8eee1979687ad3.jpg" )
 pin2 = Pin.create!(name: "moon branch", description: "Very serene", image_url: "https://s-media-cache-ak0.pinimg.com/564x/e6/98/a3/e698a38df6ac2e4e5802cc8e6d63ee75.jpg", user_id: 1)
 pin3 = Pin.create!(name: "cool wooden room", description: "Is it a sauna?", image_url: "https://s-media-cache-ak0.pinimg.com/564x/e6/c9/3a/e6c93a1818c2e9f1b165f4c63fdbc56d.jpg", user_id: 2)
@@ -23,12 +24,15 @@ pin11 = Pin.create!(name: "tomatoes", description: "super red and ripe", image_u
 pin12 = Pin.create!(name: "cloudy mountains", description: "mysterious and majestic", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495237546/photo-1469053913977-1d2f009670d9_g55xsg.jpg", user_id: 1)
 pin13 = Pin.create!(name: "Snowy Owl", description: "Hoot hoot!", image_url: "https://s-media-cache-ak0.pinimg.com/originals/a9/48/ac/a948ace51e9afcdd0b0e1332c32eea9b.gif", user_id: 1)
 
+Board.destroy_all
 board1 = Board.create!(title: "board1", description: "test1", user_id: 1)
 board2 = Board.create!(title: "board2", description: "test2", user_id: 1)
 board3 = Board.create!(title: "board3", description: "test3", user_id: 1)
 board4 = Board.create!(title: "board4", description: "test4", user_id: 1)
 board5 = Board.create!(title: "yongboard", description: "yongdescription", user_id: 2)
+board6 = Board.create!(title: "yongboard2", description: "yongdescription", user_id: 2)
 
+Pinning.destroy_all
 pinning1 = Pinning.create!(board_id: 1, pin_id: 1)
 pinning2 = Pinning.create!(board_id: 1, pin_id: 2)
 pinning3 = Pinning.create!(board_id: 1, pin_id: 3)

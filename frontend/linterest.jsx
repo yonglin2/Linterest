@@ -20,5 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TODO: remove after testing
-import { fetchUser } from './util/session_api_util';
-window.fetchUser = fetchUser;
+import { createBoard, fetchBoard, deleteBoard } from './util/board_api_util';
+window.createBoard = createBoard;
+window.fetchBoard = fetchBoard;
+window.deleteBoard = deleteBoard;

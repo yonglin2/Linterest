@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-
+import { selectUserBoards } from '../../reducers/selectors';
 import { fetchUser } from '../../actions/user_actions';
 import UserProfile from './user_profile';
 
