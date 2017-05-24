@@ -2,13 +2,65 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user-profile-container {
+  margin-top: 10px;
+  height: 300px;
+  width: 60%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-profile-top {
+  width: inherit;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-description {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: $dark-gray;
+}
+
 .user-profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
-.active{
+.fa.fa-pencil {
+  font-size: 20px;
+  color: $gray;
+  &:hover {
+    color: $dark-gray;
+  }
+}
+
+.user-profile-bottom {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.user-profile-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: $gray;
+}
+
+.user-profile-link.active {
+  width: 125px;
+  height: 50px;
   color: $dark-gray;
-  background: $gray;
+  background: $light-gray;
+  border-radius: 50%;
 }

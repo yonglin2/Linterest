@@ -17,7 +17,6 @@ class UserPins extends React.Component {
     };
     return (
       <div>
-        <h2>test</h2>
         <Masonry className={"pins-index-container"}
           elementType={'ul'}
           options={masonryOptions}

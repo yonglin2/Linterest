@@ -18,28 +18,30 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    let { user, ownPins, boards } = this.props;
+    let { user, pins, boards } = this.props;
     return (
-      <div className="user-profile-container">
-        <button>
-          <i className="fa fa-pencil"></i>
-        </button>
-        <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
-        <p>{user.description}</p>
-        <div>
-          <NavLink to={`/users/${user.id}/pins`}>
-            <button>
-              {ownPins.length} pins
-            </button>
+      <section className="user-profile-container">
+        <div className="user-profile-top">
+          <span className="user-description">{user.description}</span>
+          <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
+          <div><button className="fa fa-pencil"></button></div>
+        </div>
+
+        <div className="user-profile-bottom">
+          <NavLink exact to={`/users/${user.id}`} className="user-profile-link">
+            {boards.length} Boards
           </NavLink>
-          <br></br>
-          <NavLink exact to={`/users/${user.id}`}>
-            <button>
-              {boards.length} boards
-            </button>
+          <NavLink to={`/users/${user.id}/pins`} className="user-profile-link">
+            {pins.length} Pins
+          </NavLink>
+          <NavLink exact to={`/users/${user.id}/followers`} className="user-profile-link">
+            10 Followers
+          </NavLink>
+          <NavLink exact to={`/users/${user.id}/following`} className="user-profile-link">
+            5 Following
           </NavLink>
         </div>
-      </div>
+      </section>
     );
   }
 }
