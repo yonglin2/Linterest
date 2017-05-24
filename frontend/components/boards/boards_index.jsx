@@ -1,5 +1,6 @@
 import React from 'react';
 import BoardsIndexItem from './boards_index_item';
+import BoardCreateModal from '../modal/board_create_modal';
 
 class BoardsIndex extends React.Component {
   constructor(props) {
@@ -7,14 +8,14 @@ class BoardsIndex extends React.Component {
   }
 
   render() {
-    let { boards } = this.props;
+    let { boards, currentUser, user } = this.props;
     return(
-      <div className="boards-index-container">
-        <h2>create board button here</h2>
-        <ul>
-          {boards.map(board => <BoardsIndexItem key={board.id} board={board} />)}
-        </ul>
-      </div>
+      <ul className="boards-index-container">
+        {currentUser.id === user.id &&
+          <BoardCreateModal createBoard={this.props.createBoard}/>
+        }
+        {boards.map(board => <BoardsIndexItem key={board.id} board={board} />)}
+      </ul>
     );
   }
 }

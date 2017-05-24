@@ -8,16 +8,13 @@ const _initialState = {
   pins: []
 };
 
-const BoardReducer = (state = {}, action) => {
+const BoardReducer = (state = _initialState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_BOARD:
       return merge({}, action.board);
-    // not sure if i'll need delete board
-    // case DELETE_BOARD:
-    //   let newState = merge({}, state);
-    //   delete newState[action.board.id];
-    //   return newState;
+    case DELETE_BOARD:
+      return _initialState;
     default:
       return state;
   }

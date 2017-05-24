@@ -7,7 +7,7 @@ class Api::PinsController < ApplicationController
   def create
     @pin = Pin.new(pin_params)
     @pin.user_id = current_user.id
-    
+
     if @pin.save
       render :show
     else
@@ -24,7 +24,12 @@ class Api::PinsController < ApplicationController
   end
 
   def destroy
-    # not sure if this should be here
+    @pin = Pin.find(params[:id])
+    if @pin.destroy
+      render :show
+    else
+      render json: ['Failed to delete'], status: 404
+    end
   end
 
   private
