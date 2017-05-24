@@ -1,18 +1,17 @@
 import { connect } from 'react-redux';
 import { selectUserData } from '../../reducers/selectors';
 import { fetchBoard } from '../../actions/board_actions';
-import BoardShow from './board_show';
+import BoardsIndex from './boards_index';
 
 const mapStateToProps = (state) => ({
-  board: state.board,
-  pins: selectUserData(state.board.pins)
+  boards: selectUserData(state.user.boards)
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchBoard: (board) => dispatch(fetchBoard(board))
+  fetchBoard: (id) => dispatch(fetchBoard(id))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(BoardShow);
+)(BoardsIndex);

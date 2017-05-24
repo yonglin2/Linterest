@@ -9,7 +9,6 @@ class UserProfile extends React.Component {
 
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.userId);
-    console.log(this.props);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,14 +34,11 @@ class UserProfile extends React.Component {
             </button>
           </NavLink>
           <br></br>
-          <NavLink to={`/users/${user.id}/boards`}>
+          <NavLink exact to={`/users/${user.id}`}>
             <button>
               {boards.length} boards
             </button>
           </NavLink>
-          {boards.map((board)=>{
-            return (<li>{board.title}</li>);
-          })}
         </div>
       </div>
     );
