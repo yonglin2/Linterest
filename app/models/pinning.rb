@@ -3,6 +3,5 @@ class Pinning < ApplicationRecord
   validates_uniqueness_of :board_id, :scope => :pin_id
 
   belongs_to :board
-
   belongs_to :pin
 end

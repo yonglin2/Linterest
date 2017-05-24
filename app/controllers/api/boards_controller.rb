@@ -37,7 +37,6 @@ class Api::BoardsController < ApplicationController
     end
   end
 
-
   private
 
   def board_params

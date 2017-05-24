@@ -24,3 +24,6 @@ import { createBoard, fetchBoard, deleteBoard } from './util/board_api_util';
 window.createBoard = createBoard;
 window.fetchBoard = fetchBoard;
 window.deleteBoard = deleteBoard;
+
+import { createPinning } from './util/pinning_api_util';
+window.createPinning = createPinning;
