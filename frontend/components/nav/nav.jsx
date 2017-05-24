@@ -22,7 +22,7 @@ class Nav extends React.Component {
             </h2>
           </div>
           <div className="right-nav">
-            <button>
+            <button onClick={this.props.requestAllPins}>
               <i className="fa fa-compass" aria-hidden="true"></i>
             </button>
             <Link to={`/users/${currentUser.id}`}>

@@ -23,6 +23,8 @@ pin10 = Pin.create!(name: "single swan", description: "real swan?", image_url: "
 pin11 = Pin.create!(name: "tomatoes", description: "super red and ripe", image_url: "http://farm4.static.flickr.com/3605/5739526869_e47d3616f3_o.gif", user_id: 1)
 pin12 = Pin.create!(name: "cloudy mountains", description: "mysterious and majestic", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495237546/photo-1469053913977-1d2f009670d9_g55xsg.jpg", user_id: 1)
 pin13 = Pin.create!(name: "Snowy Owl", description: "Hoot hoot!", image_url: "https://s-media-cache-ak0.pinimg.com/originals/a9/48/ac/a948ace51e9afcdd0b0e1332c32eea9b.gif", user_id: 1)
+pin14 = Pin.create!(name: "Starry Night", description: "By the sea", image_url: "https://s-media-cache-ak0.pinimg.com/564x/df/bf/1f/dfbf1fd24542969adcbc25ac3c75086e.jpg", user_id: 1)
+
 
 Board.destroy_all
 board1 = Board.create!(title: "board1", description: "test1", user_id: 1)

@@ -10,3 +10,5 @@ how do
 nav bar nested check
 
 will changing a nested thing in parent slice of state cause re-render?
+
+user profile pic didn't change...

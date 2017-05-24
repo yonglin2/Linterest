@@ -9,7 +9,6 @@ class UserPins extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     let { userPins } = this.props;
     let masonryOptions = {
       transitionDuration: 0,

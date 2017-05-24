@@ -24,7 +24,6 @@ class UserProfile extends React.Component {
         <button>
           <i className="fa fa-pencil"></i>
         </button>
-        <h2>This is profile page of {user.username}</h2>
         <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
         <p>{user.description}</p>
         <div>

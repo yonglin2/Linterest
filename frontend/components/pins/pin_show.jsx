@@ -11,21 +11,15 @@ class PinShow extends React.Component {
     this.props.requestSinglePin(this.props.id);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.pinDetail.user_id !== nextProps.pinDetail.user_id) {
-      this.props.fetchUser(nextProps.pinDetail.user_id);
-    }
-  }
-
   render() {
-    let { pinDetail, userImageUrl } = this.props;
+    let { pinDetail } = this.props;
 
     return (
       <section className='pin-show-container'>
         <div className="pin-show-header">
           <h2 className='pin-show-title'>{pinDetail.name}</h2>
-          <Link to={`users/${pinDetail.user_id}`} className="pin-show-user-link">
-            <img className='pin-show-user-img' src={userImageUrl} alt="creator pic"></img>
+          <Link to={`/users/${pinDetail.user_id}`} className="pin-show-user-link">
+            <img className='pin-show-user-img' src={pinDetail.creator_image_url} alt="creator pic"></img>
           </Link>
         </div>
         <div className="pin-show-img-container">
