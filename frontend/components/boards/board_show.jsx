@@ -12,6 +12,7 @@ class BoardShow extends React.Component{
   }
 
   componentDidMount(){
+    console.log(this.props);
     this.props.fetchBoard(this.props.match.params.boardId);
   }
 
