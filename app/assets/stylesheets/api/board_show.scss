@@ -1,0 +1,62 @@
+.board-show-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  color: $dark-gray;
+}
+
+.board-show-edit-delete-container {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 70%;
+  margin: 20px 0px;
+  font-size: 20px;
+  color: $gray;
+}
+
+.board-edit.fa.fa-pencil{
+  margin-left: 70px;
+  &:hover {
+    color: $dark-gray;
+  }
+}
+
+.board-delete.fa.fa-trash{
+  &:hover {
+    color: $logo-red;
+  }
+}
+.board-show-title {
+  font-size: 35px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+.board-show-pin-count {
+  font-size: 20px;
+  color: $gray;
+  align-self: center;
+}
+
+.board-pin-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-pin-container:hover {
+  .fa.fa-thumb-tack.unpin{
+    align-self: flex-end;
+    margin-bottom: 5px;
+    display: block;
+    color: $logo-red;
+    margin-bottom: 15px;
+  }
+}
+
+.fa.fa-thumb-tack.unpin{
+  font-size: 18px;
+  align-self: flex-end;
+  margin-bottom: 5px;
+  color: rgba(0,0,0,0);
+}

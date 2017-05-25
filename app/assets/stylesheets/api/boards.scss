@@ -6,14 +6,42 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  padding: 35px;
+}
+
+.board-create {
+  margin: 20px;
+  height: 200px;
+  width: 300px;
+  background: $light-gray;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .board-index-item {
+  margin: 15px;
   height: 200px;
   width: 300px;
+  :hover {
+    opacity: 0.6;
+  }
 }
 
 .board-index-item-thumbnail {
+  border-radius: 3px;
   height: 200px;
   object-fit: cover;
+}
+
+.board-index-item-title {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  color: $dark-gray;
 }

@@ -8,6 +8,7 @@
 User.destroy_all
 user1 = User.create!(username: "guest", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495485323/vhvr5jwtjouuzujpfzwh.png", description: "What's up, dog?")
 user2 = User.create!(username: "yong", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495351916/nrztsokinadfklw0sbuo.jpg", description: "Hire me!")
+user3 = User.create!(username: "dallas", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/c_scale,w_877/v1495487377/dmbw7lomx2reu9bz4c03.jpg", description: "Commander")
 
 Pin.destroy_all
 pin1 = Pin.create!(name: "red beach", description: "Very red", image_url: "https://s-media-cache-ak0.pinimg.com/564x/7f/f2/3e/7ff23e3b39f581a72d8eee1979687ad3.jpg" )
@@ -40,3 +41,8 @@ pinning2 = Pinning.create!(board_id: 1, pin_id: 2)
 pinning3 = Pinning.create!(board_id: 1, pin_id: 3)
 pinning4 = Pinning.create!(board_id: 1, pin_id: 4)
 pinning5 = Pinning.create!(board_id: 5, pin_id: 4)
+
+Follow.destroy_all
+follow1 = Follow.create!(following_id: 2, follower_id: 1)
+follow2 = Follow.create!(following_id: 3, follower_id: 1)
+follow3 = Follow.create!(following_id: 1, follower_id: 3)

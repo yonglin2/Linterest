@@ -53,8 +53,8 @@ class BoardCreateModal extends React.Component {
   render() {
     return(
       <div>
-        <button
-          onClick={this.openModal}>create
+        <button className="board-create"
+          onClick={this.openModal}><i className="fa fa-plus"></i>
         </button>
         <Modal
           isOpen={this.state.modalOpen}

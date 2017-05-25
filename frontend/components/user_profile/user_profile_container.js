@@ -8,7 +8,9 @@ const mapStateToProps = (state, ownProps) => ({
   user: state.user,
   boards: selectUserData(state.user.boards),
   ownPins: selectUserData(state.user.own_pins),
-  pins: selectUserData(state.user.pins)
+  pins: selectUserData(state.user.pins),
+  followers: selectUserData(state.user.followers),
+  followings: selectUserData(state.user.followings)
 });
 
 

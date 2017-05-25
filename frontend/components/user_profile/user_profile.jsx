@@ -18,13 +18,13 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    let { user, pins, boards } = this.props;
+    let { user, pins, boards, followers, followings } = this.props;
     return (
       <section className="user-profile-container">
         <div className="user-profile-top">
           <span className="user-description">{user.description}</span>
           <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
-          <div><button className="fa fa-pencil"></button></div>
+          <div><button className="user fa fa-pencil"></button></div>
         </div>
 
         <div className="user-profile-bottom">
@@ -35,10 +35,10 @@ class UserProfile extends React.Component {
             {pins.length} Pins
           </NavLink>
           <NavLink exact to={`/users/${user.id}/followers`} className="user-profile-link">
-            10 Followers
+            {followers.length} Followers
           </NavLink>
           <NavLink exact to={`/users/${user.id}/following`} className="user-profile-link">
-            5 Following
+            {followings.length} Following
           </NavLink>
         </div>
       </section>

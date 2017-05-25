@@ -14,6 +14,24 @@ class User < ApplicationRecord
     primary_key: :id,
     class_name: "Pin"
 
+  has_many :follower_users,
+    foreign_key: :following_id,
+    primary_key: :id,
+    class_name: "Follow"
+
+  has_many :following_users,
+    foreign_key: :follower_id,
+    primary_key: :id,
+    class_name: "Follow"
+
+  has_many :followers,
+    through: :follower_users,
+    source: :follower
+
+  has_many :followings,
+    through: :following_users,
+    source: :following
+
   after_initialize :ensure_session_token
 
   def password=(password)

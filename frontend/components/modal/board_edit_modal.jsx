@@ -53,8 +53,8 @@ class BoardEditModal extends React.Component {
   render() {
     return(
       <div>
-        <button
-          onClick={this.openModal}>edit
+        <button className="board-edit fa fa-pencil"
+          onClick={this.openModal}>
         </button>
         <Modal
           isOpen={this.state.modalOpen}

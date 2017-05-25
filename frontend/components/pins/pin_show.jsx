@@ -28,7 +28,6 @@ class PinShow extends React.Component {
 
   render() {
     let { pinDetail, currentBoards, pinned_boards } = this.props;
-    console.log(pinned_boards);
     return (
       <section className='pin-show-container'>
         <div className="pin-show-header">

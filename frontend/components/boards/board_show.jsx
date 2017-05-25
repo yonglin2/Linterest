@@ -12,7 +12,6 @@ class BoardShow extends React.Component{
   }
 
   componentDidMount(){
-    console.log(this.props);
     this.props.fetchBoard(this.props.match.params.boardId);
   }
 
@@ -38,13 +37,16 @@ class BoardShow extends React.Component{
       fitWidth: true
     };
     return (
-      <section>
-        <h2>{board.title}</h2>
-        <h4>{pins.length} pins</h4>
-          {currentUser.id === user.id &&
-            <button onClick={this.handleDelete}>delete this board</button>}
-          {currentUser.id === user.id &&
+      <section className="board-show-container">
+        <div className="board-show-edit-delete-container">
+          {currentUser.id === board.user_id &&
+            <button className="board-delete fa fa-trash"
+              onClick={this.handleDelete}></button>}
+          {currentUser.id === board.user_id &&
             <BoardEditModal></BoardEditModal>}
+        </div>
+        <h2 className="board-show-title">{board.title}</h2>
+        <h4 className="board-show-pin-count">{pins.length} pins</h4>
 
         <Masonry className={"pins-index-container"}
           elementType={'ul'}
@@ -55,16 +57,16 @@ class BoardShow extends React.Component{
           {
             pins.map( (pin) => {
               return (
-                <div key={`div-${pin.id}`}>
-                <button value={pin.id}
-                  key={`unpin-${pin.id}`}
-                  onClick={this.handleUnpin}
-                  className={"fa fa-trash"}>Unpin</button>
-                <PinModal
-                  key={ `pin${pin.id}` }
-                  pin={ pin }
-                  >
-                </PinModal>
+                <div key={`div-${pin.id}`} className="board-pin-container">
+                  <button value={pin.id}
+                    key={`unpin-${pin.id}`}
+                    onClick={this.handleUnpin}
+                    className="fa fa-thumb-tack unpin">Unpin</button>
+                  <PinModal
+                    key={ `pin${pin.id}` }
+                    pin={ pin }
+                    >
+                  </PinModal>
               </div>);
               })
             }
