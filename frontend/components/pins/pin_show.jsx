@@ -27,8 +27,8 @@ class PinShow extends React.Component {
   }
 
   render() {
-    let { pinDetail, currentBoards } = this.props;
-
+    let { pinDetail, currentBoards, pinned_boards } = this.props;
+    console.log(pinned_boards);
     return (
       <section className='pin-show-container'>
         <div className="pin-show-header">
@@ -36,7 +36,7 @@ class PinShow extends React.Component {
           <Link to={`/users/${pinDetail.user_id}`} className="pin-show-user-link">
             <img className='pin-show-user-img' src={pinDetail.creator_image_url} alt="creator pic"></img>
           </Link>
-          <select selected="fdsa"
+          <select
             onChange={this.handleChooseBoard}>
             <option key="disabled">Choose board</option>
             {currentBoards.map((board) => {

@@ -8,7 +8,8 @@ import PinShow from './pin_show';
 
 const mapStateToProps = (state) => ({
   pinDetail: state.pinDetail,
-  currentBoards: selectUserData(state.session.currentUser.boards)
+  currentBoards: selectUserData(state.session.currentUser.boards),
+  pinned_boards: selectUserData(state.pinDetail.pinned_boards)
 });
 
 const mapDispatchToProps = dispatch => ({

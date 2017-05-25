@@ -22,7 +22,10 @@ class BoardShow extends React.Component{
 
   handleUnpin(e){
     e.preventDefault;
-    console.log(e.currentTarget.value);
+    let pinId = parseInt(e.currentTarget.value);
+    let boardId = this.props.board.id;
+    let pinning = {pin_id: pinId, board_id: boardId};
+    this.props.deletePinning(pinning);
   }
 
   render() {
@@ -48,10 +51,11 @@ class BoardShow extends React.Component{
           {
             pins.map( (pin) => {
               return (
-                <div>
+                <div key={`div-${pin.id}`}>
                 <button value={pin.id}
                   key={`unpin-${pin.id}`}
-                  onClick={this.handleUnpin}>Unpin</button>
+                  onClick={this.handleUnpin}
+                  className={"fa fa-trash"}>Unpin</button>
                 <PinModal
                   key={ `pin${pin.id}` }
                   pin={ pin }
