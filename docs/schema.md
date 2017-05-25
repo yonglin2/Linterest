@@ -39,5 +39,5 @@ pin_id      | integer   | null: false, foreign key (references pins), index: tru
 column name    | data type | details
 ---------------|-----------|-----------------------
 id             | integer   | null: false, primary key
-followee_id    | integer   | null: false, foreign key (references users), index: true
+follower_id    | integer   | null: false, foreign key (references users), index: true
 following_id   | integer   | null: false, foreign key (references users), index: true
