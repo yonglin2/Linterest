@@ -23,6 +23,11 @@ export const createBoard = (board) => dispatch => (
     .then(newBoard => dispatch(receiveBoard(newBoard)))
 );
 
+export const editBoard = (board) => dispatch => (
+  APIUtil.updateBoard(board)
+  .then(updatedBoard => dispatch(receiveBoard(updatedBoard)))
+);
+
 export const deleteBoard = (boardId) => dispatch => (
   APIUtil.deleteBoard(boardId)
     .then((board) => dispatch(removeBoard(board)))

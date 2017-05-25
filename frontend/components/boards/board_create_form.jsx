@@ -34,8 +34,8 @@ class BoardCreateForm extends React.Component{
             placeholder="Board title"
             onChange={this.update('title')}>
           </input>
-
         </label>
+
         <label>
           <h2>Description</h2>
           <input type="text"

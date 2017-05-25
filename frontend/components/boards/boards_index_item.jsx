@@ -14,6 +14,7 @@ const BoardsIndexItem = ({ board }) => {
           <img className="board-index-item-thumbnail" src={boardPins[0].image_url}></img>
         )}
       </li>
+      {board.title}
     </Link>
   );
 };
