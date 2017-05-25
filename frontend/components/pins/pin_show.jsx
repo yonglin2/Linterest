@@ -40,6 +40,7 @@ class PinShow extends React.Component {
             onChange={this.handleChooseBoard}>
             <option key="disabled">Choose board</option>
             {currentBoards.map((board) => {
+              if (pinned_boards.includes(board.id)) {return;}
               return(<option key={board.id} value={board.id}>{board.title}</option>);
             })}
           </select>

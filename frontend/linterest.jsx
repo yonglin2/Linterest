@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TODO: remove after testing
-import { createBoard, fetchBoard, deleteBoard } from './util/board_api_util';
+import { createBoard, fetchBoard, deleteBoard, updateBoard } from './util/board_api_util';
 window.createBoard = createBoard;
 window.fetchBoard = fetchBoard;
 window.deleteBoard = deleteBoard;
+window.updateBoard = updateBoard;
 
 import { createPinning, deletePinning } from './util/pinning_api_util';
 window.createPinning = createPinning;

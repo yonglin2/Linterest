@@ -19,3 +19,11 @@ export const deleteBoard = (boardId) => (
     url: `/api/boards/${boardId}`
   })
 );
+
+export const updateBoard = (board) =>{
+  return $.ajax({
+    url: `/api/boards/${board.id}`,
+    type: "PATCH",
+    data: { board }
+  });
+};
