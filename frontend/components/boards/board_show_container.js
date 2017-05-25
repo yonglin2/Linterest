@@ -3,6 +3,7 @@ import { selectUserData } from '../../reducers/selectors';
 import { fetchBoard, deleteBoard } from '../../actions/board_actions';
 import BoardShow from './board_show';
 import { deletePinning } from '../../actions/pinning_actions';
+import { fetchUser } from '../../actions/user_actions';
 
 const mapStateToProps = (state) => ({
   board: state.board,
@@ -13,6 +14,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchBoard: (board) => dispatch(fetchBoard(board)),
+  fetchUser: (userId) => dispatch(fetchUser(userId)),
   deleteBoard: (boardId) => dispatch(deleteBoard(boardId)),
   deletePinning: (pinning) => dispatch(deletePinning(pinning))
 });

@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
 import PinModal from '../modal/pin_modal';
+import BoardEditModal from '../modal/board_edit_modal';
 
 class BoardShow extends React.Component{
   constructor(props) {
@@ -40,8 +41,10 @@ class BoardShow extends React.Component{
         <h2>{board.title}</h2>
         <h4>{pins.length} pins</h4>
           {currentUser.id === user.id &&
-            <button onClick={this.handleDelete}>delete this board</button>
-          }
+            <button onClick={this.handleDelete}>delete this board</button>}
+          {currentUser.id === user.id &&
+            <BoardEditModal></BoardEditModal>}
+
         <Masonry className={"pins-index-container"}
           elementType={'ul'}
           options={masonryOptions}
