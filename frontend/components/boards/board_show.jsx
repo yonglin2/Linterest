@@ -7,6 +7,7 @@ class BoardShow extends React.Component{
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleUnpin = this.handleUnpin.bind(this);
   }
 
   componentDidMount(){
@@ -19,9 +20,13 @@ class BoardShow extends React.Component{
     this.props.deleteBoard(this.props.board.id);
   }
 
+  handleUnpin(e){
+    e.preventDefault;
+    console.log(e.currentTarget.value);
+  }
+
   render() {
     let { pins, board, currentUser, user } = this.props;
-    console.log(this.props);
     let masonryOptions = {
       transitionDuration: 0,
       gutter: 25,
@@ -43,9 +48,16 @@ class BoardShow extends React.Component{
           {
             pins.map( (pin) => {
               return (
-                <PinModal key={ pin.id }
-                  pin={ pin }>
-                </PinModal>);
+                <div>
+                <button value={pin.id}
+                  key={`unpin-${pin.id}`}
+                  onClick={this.handleUnpin}>Unpin</button>
+                <PinModal
+                  key={ `pin${pin.id}` }
+                  pin={ pin }
+                  >
+                </PinModal>
+              </div>);
               })
             }
           </Masonry>

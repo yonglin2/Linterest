@@ -5,3 +5,11 @@ export const createPinning = ( pinning ) => {
     data: { pinning }
   });
 };
+
+export const deletePinning = ( pinning ) => {
+  return $.ajax({
+    method: 'DELETE',
+    url: '/api/pinnings/0',
+    data: { pinning }
+  });
+};

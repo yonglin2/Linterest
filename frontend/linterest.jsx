@@ -25,5 +25,6 @@ window.createBoard = createBoard;
 window.fetchBoard = fetchBoard;
 window.deleteBoard = deleteBoard;
 
-import { createPinning } from './util/pinning_api_util';
+import { createPinning, deletePinning } from './util/pinning_api_util';
 window.createPinning = createPinning;
+window.deletePinning = deletePinning;
