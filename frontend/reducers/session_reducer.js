@@ -5,10 +5,12 @@ import {
   RECEIVE_ERRORS
 } from '../actions/session_actions';
 
-import { RECEIVE_BOARD } from '../actions/board_actions';
+import { RECEIVE_BOARD, DELETE_BOARD } from '../actions/board_actions';
 
 const nullUser = Object.freeze({
-  currentUser: null,
+  currentUser: {
+    boards: {}
+  },
   errors: []
 });
 
@@ -22,7 +24,12 @@ const SessionReducer = (state = nullUser, action) => {
       });
     case RECEIVE_BOARD:
       let newState = merge({}, state);
+      console.log(newState);
       newState.currentUser.boards[action.board.id] = action.board;
+      return newState;
+    case DELETE_BOARD:
+      newState = merge({}, state);
+      delete newState.currentUser.boards[action.board.id];
       return newState;
     case RECEIVE_ERRORS:
       const errors = action.errors;

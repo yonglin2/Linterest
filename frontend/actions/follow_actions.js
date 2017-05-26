@@ -3,9 +3,9 @@ import * as APIUtil from "../util/follow_api_util";
 export const RECEIVE_FOLLOW = "RECEIVE_FOLLOW";
 export const REMOVE_FOLLOW = "REMOVE_FOLLOW";
 
-export const receiveFollow = follow => ({
+export const receiveFollow = user => ({
   type: RECEIVE_FOLLOW,
-  follow
+  user
 });
 
 export const removeFollow = follow => ({
@@ -16,7 +16,7 @@ export const removeFollow = follow => ({
 export const createFollow = (follow) => dispatch => {
   return (
     APIUtil.createFollow(follow)
-    .then( newFollow => dispatch(receiveFollow(newFollow)))
+    .then( user => dispatch(receiveFollow(user)))
   );
 };
 

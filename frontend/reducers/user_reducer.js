@@ -20,13 +20,15 @@ const UserReducer = (state = defaultUser, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_USER:
-      return merge({}, action.user);
+      return merge({}, state, action.user);
     case RECEIVE_FOLLOW:
-      // Object.assign({}, state, { followed: true });
-      return merge({}, state, { followed: true } );
+      let newState = merge({}, state, { followed: true } );
+      newState.followers[action.user.id] = action.user;
+      return newState;
     case REMOVE_FOLLOW:
-      // Object.assign({}, state, { followed: false });
-      return merge({}, state, { followed: false } );
+      newState = merge({}, state, { followed: false } );
+      delete newState.followers[action.follow.follower_id];
+      return newState;
     default:
       return state;
   }

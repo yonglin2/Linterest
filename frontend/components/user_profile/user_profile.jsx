@@ -6,6 +6,7 @@ import FollowContainer from '../follows/follow_container';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
+    // TODO: <div><button className="user fa fa-pencil"></button></div>
   }
 
   componentDidMount() {
@@ -25,7 +26,6 @@ class UserProfile extends React.Component {
         <div className="user-profile-top">
           <span className="user-description">{user.description}</span>
           <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
-          <div><button className="user fa fa-pencil"></button></div>
           <FollowContainer></FollowContainer>
         </div>
 

@@ -1,3 +1,19 @@
 // Place all the styles related to the api/follows controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.follow-button {
+  color: $light-gray;
+  background: $logo-red;
+  border-radius: 10%;
+  width: 100px;
+  height: 30px;
+}
+
+.unfollow-button {
+  color: $dark-gray;
+  background: $light-gray;
+  border-radius: 10%;
+  width: 100px;
+  height: 30px;
+}
