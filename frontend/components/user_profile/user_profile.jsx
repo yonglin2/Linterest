@@ -37,7 +37,7 @@ class UserProfile extends React.Component {
           <NavLink exact to={`/users/${user.id}/followers`} className="user-profile-link">
             {followers.length} Followers
           </NavLink>
-          <NavLink exact to={`/users/${user.id}/following`} className="user-profile-link">
+          <NavLink exact to={`/users/${user.id}/followings`} className="user-profile-link">
             {followings.length} Following
           </NavLink>
         </div>

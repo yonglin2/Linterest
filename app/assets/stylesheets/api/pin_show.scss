@@ -1,0 +1,50 @@
+
+.pin-show-container {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+//
+// .pinning-dropdown{
+//   // position: absolute;
+//   // top: 2%;
+//   // right: 10%;
+// }
+//
+// .pin-show-header {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+//   width: 80%;
+//   margin-bottom: 20px;
+// }
+//
+.pin-show-user-img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+//
+// .pin-show-title{
+//   font-size: 25px;
+//   font-weight: bold;
+//   color: $dark-gray;
+// }
+//
+// .pin-show-img-container {
+// }
+//
+// .pin-show-img {
+//   margin-top: 15px;
+//   border-radius: 3px;
+//   margin: 15px;
+//   object-fit: contain;
+// }
+//
+// .pin-show-description {
+//   font-size: 15px;
+//   color: $dark-gray;
+// }

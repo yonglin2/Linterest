@@ -30,24 +30,31 @@ class PinShow extends React.Component {
     let { pinDetail, currentBoards, pinned_boards } = this.props;
     return (
       <section className='pin-show-container'>
+        <div className="pinning-dropdown-container">
+          <form>
+            <select
+              onChange={this.handleChooseBoard}>
+              <option key="disabled">Choose board</option>
+              {currentBoards.map((board) => {
+                if (pinned_boards.includes(board.id)) {return;}
+                return(<option key={board.id} value={board.id}>{board.title}</option>);
+              })}
+            </select>
+            <button type="Submit">submit</button>
+          </form>
+
+        </div>
         <div className="pin-show-header">
           <h2 className='pin-show-title'>{pinDetail.name}</h2>
           <Link to={`/users/${pinDetail.user_id}`} className="pin-show-user-link">
             <img className='pin-show-user-img' src={pinDetail.creator_image_url} alt="creator pic"></img>
           </Link>
-          <select
-            onChange={this.handleChooseBoard}>
-            <option key="disabled">Choose board</option>
-            {currentBoards.map((board) => {
-              if (pinned_boards.includes(board.id)) {return;}
-              return(<option key={board.id} value={board.id}>{board.title}</option>);
-            })}
-          </select>
         </div>
-        <div className="pin-show-img-container">
+        <div>
           <img className="pin-show-img" src={pinDetail.image_url} alt={pinDetail.name}></img>
-          <figcaption className='pin-show-description'>{pinDetail.description}</figcaption>
         </div>
+        <figcaption className='pin-show-description'>{pinDetail.description}</figcaption>
+
       </section>
     );
   }

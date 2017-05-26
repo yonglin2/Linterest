@@ -27,7 +27,7 @@ end
 json.followers do
   user.followers.each do |follower|
     json.set! follower.id do
-      json.extract! follower, :id, :image_url
+      json.extract! follower, :id, :image_url, :username
     end
   end
 end
@@ -35,7 +35,7 @@ end
 json.followings do
   user.followings.each do |following|
     json.set! following.id do
-      json.extract! following, :id, :image_url
+      json.extract! following, :id, :image_url, :username
     end
   end
 end

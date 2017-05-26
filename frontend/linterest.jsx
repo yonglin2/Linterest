@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TODO: remove after testing
-import { createBoard, fetchBoard, deleteBoard, updateBoard } from './util/board_api_util';
-window.createBoard = createBoard;
-window.fetchBoard = fetchBoard;
-window.deleteBoard = deleteBoard;
-window.updateBoard = updateBoard;
+import { createFollow, deleteFollow } from './util/follow_api_util';
 
-import { createPinning, deletePinning } from './util/pinning_api_util';
-window.createPinning = createPinning;
-window.deletePinning = deletePinning;
+window.createFollow = createFollow;
+window.deleteFollow = deleteFollow;
+
+// import { createFollow, deleteFollow } from './actions/follow_actions';
+//
+// window.createFollow = createFollow;
+// window.deleteFollow = deleteFollow;

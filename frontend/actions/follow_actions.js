@@ -13,16 +13,16 @@ export const removeFollow = follow => ({
   follow
 });
 
-export const createFollow = (followerId, followingId) => dispatch => {
+export const createFollow = (follow) => dispatch => {
   return (
-    APIUtil.createFollow(followerId, followingId)
-    .then( follow => dispatch(receiveFollow(follow)))
+    APIUtil.createFollow(follow)
+    .then( newFollow => dispatch(receiveFollow(newFollow)))
   );
 };
 
-export const deleteFollow = (followerId, followingId) => dispatch => {
+export const deleteFollow = (follow) => dispatch => {
   return (
-    APIUtil.deleteFollow(followerId, followingId)
-    .then( follow => dispatch(removeFollow(follow)))
+    APIUtil.deleteFollow(follow)
+    .then(removedFollow => dispatch(removeFollow(removedFollow)))
   );
 };
