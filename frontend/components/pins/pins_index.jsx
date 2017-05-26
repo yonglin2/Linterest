@@ -26,14 +26,13 @@ class PinsIndex extends React.Component {
         disableImagesLoaded={false}
         updateOnEachImageLoad={false}
         >
-        {
-          pins.map( (pin) => {
-            return (
-              <PinModal key={ pin.id }
-                pin={ pin }>
-              </PinModal>);
-            })
+        {pins.map( (pin) => {
+          return (
+            <PinModal key={ pin.id }
+              pin={ pin }>
+            </PinModal>);
           }
+        )}
       </Masonry>
     );
   }

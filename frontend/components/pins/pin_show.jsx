@@ -39,12 +39,17 @@ class PinShow extends React.Component {
             <select className="pin-show-board-select"
               onChange={this.handleChooseBoard}>
               <option key="disabled">Choose board</option>
-              {currentBoards.map((board) => {
-                if (pinned_boards.includes(board.id)) {return;}
-                return(<option className="pin-show-option"
-                  key={board.id}
-                  value={board.id}>{board.title}</option>);
-              })}
+              {
+                currentBoards.map((board) => {
+                  if (pinned_boards.includes(board.id)) {return;}
+                  return(
+                    <option className="pin-show-option"
+                      key={board.id}
+                      value={board.id}>{board.title}
+                    </option>
+                  );
+                })
+              }
             </select>
             <button type="Submit" className="fa fa-thumb-tack board-show-pin">Pin</button>
           </form>
