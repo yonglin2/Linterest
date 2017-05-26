@@ -1,6 +1,6 @@
 import merge  from 'lodash/merge';
 import { RECEIVE_BOARD, DELETE_BOARD } from '../actions/board_actions';
-
+import { LOGOUT_USER } from '../actions/session_actions';
 const _initialState = {
   id: 0,
   title: "",
