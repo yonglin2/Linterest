@@ -22,7 +22,6 @@ const SessionReducer = (state = nullUser, action) => {
       });
     case RECEIVE_BOARD:
       let newState = merge({}, state);
-      console.log(newState);
       newState.currentUser.boards[action.board.id] = action.board;
       return newState;
     case DELETE_BOARD:
