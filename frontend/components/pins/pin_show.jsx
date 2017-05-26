@@ -41,7 +41,9 @@ class PinShow extends React.Component {
               <option key="disabled">Choose board</option>
               {currentBoards.map((board) => {
                 if (pinned_boards.includes(board.id)) {return;}
-                return(<option key={board.id} value={board.id}>{board.title}</option>);
+                return(<option className="pin-show-option"
+                  key={board.id}
+                  value={board.id}>{board.title}</option>);
               })}
             </select>
             <button type="Submit" className="fa fa-thumb-tack board-show-pin">Pin</button>

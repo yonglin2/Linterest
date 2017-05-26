@@ -8,17 +8,26 @@
 }
 
 .pinning-dropdown-container {
+  display: flex;
+  align-items: center;
   align-self: flex-start;
 }
 
 .pin-show-board-select {
   border: 0;
+  width: 130px;
+  height: 40px;
   background: $light-gray;
-  font-size: 20px;
+  font-size: 15px;
+  color: $dark-gray;
+}
+
+.pin-show-option {
   color: $dark-gray;
 }
 
 .fa.fa-thumb-tack.board-show-pin {
+  margin-left: 10px;
   font-size: 20px;
   color: $logo-red;
 }

@@ -24,6 +24,9 @@ const UserReducer = (state = defaultUser, action) => {
       return merge({}, action.user);
     case RECEIVE_FOLLOW:
       let newState = merge({}, state, { followed: true } );
+      if (!newState.followers) {
+        newState.followers = {};
+      }
       newState.followers[action.user.id] = action.user;
       return newState;
     case REMOVE_FOLLOW:
