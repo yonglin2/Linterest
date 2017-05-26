@@ -12,8 +12,6 @@ It is a full-stack web application built on the following:
 *  React/Redux frontend
 *  Postgres RDBMS
 
-![login](./docs/screenshots/login.png)
-
 ## Features
 
 #### Masonry
@@ -35,7 +33,7 @@ updateOnEachImageLoad={false}
 )}
 </Masonry>
 ```
-
+![Masonry](docs/screencaps/window_resize.gif)
 #### Pinning
 
 An user can add a pin to their collection, which are categorized by 'boards'. A board cannot have duplicate pins. I check to see if a pin is already pinned to the current board, and does not map that as an option if that's true.
@@ -60,6 +58,9 @@ An user can add a pin to their collection, which are categorized by 'boards'. A 
 
 #### Modals
 A pin's show page is opened in a modal for a better view of the image in a pin. It's done using [React Modal](https://github.com/reactjs/react-modal). From the modal, you can click on the user profile picture to go to the user who uploaded the pin.
+
+![Pin Modal](docs/screencaps/pin_show_and_follows.gif)
+
 
 #### Drag and Drop upload
 Users can upload images via drag'n'drop or by clicking in the zone, with [react-dropzone](https://github.com/okonet/react-dropzone).
