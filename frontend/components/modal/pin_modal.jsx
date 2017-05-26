@@ -18,7 +18,6 @@ const style = {
     left            : '25%',
     right           : '25%',
     border          : '1px solid #ccc',
-    padding         : '10px',
     zIndex          : 11,
     opacity         : 0,
     transition      : 'opacity 0.4s'
