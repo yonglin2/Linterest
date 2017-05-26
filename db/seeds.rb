@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-user1 = User.create!(username: "guest", password: "password", image_url: "https://res.cloudinary.com/dbmxr3ior/image/upload/v1495784002/logrr8l6xm8dbstsmh0y.jpg", description: "What's up, dog?")
+user1 = User.create!(username: "guest", password: "password", image_url: "https://res.cloudinary.com/dbmxr3ior/image/upload/c_scale,w_986/v1495645704/n16djmokxo8xoqrywb59.jpg", description: "What's up, dog?")
 user2 = User.create!(username: "yong", password: "password", image_url: "https://res.cloudinary.com/dbmxr3ior/image/upload/v1495351916/nrztsokinadfklw0sbuo.jpg", description: "Hire me!")
 user3 = User.create!(username: "dallas", password: "password", image_url: "https://res.cloudinary.com/dbmxr3ior/image/upload/c_scale,w_877/v1495487377/dmbw7lomx2reu9bz4c03.jpg", description: "Commander")
 user4 = User.create!(username: "sam", password: "password", image_url: "https://res.cloudinary.com/dbmxr3ior/image/upload/c_scale,w_877/v1495487377/dmbw7lomx2reu9bz4c03.jpg", description: "aperture")
@@ -23,7 +23,7 @@ pin7 = Pin.create!(name: "desert", description: "dry", image_url: "https://s-med
 pin8 = Pin.create!(name: "lake", description: "a sliver", image_url: "https://s-media-cache-ak0.pinimg.com/564x/9c/5e/f4/9c5ef4906dd12535dde76234af059a11.jpg", user_id: 1)
 pin9 = Pin.create!(name: "dark mountain", description: "dawn or dusk?", image_url: "https://s-media-cache-ak0.pinimg.com/564x/5d/af/d7/5dafd762fafa1d649867d1189c66205d.jpg", user_id: 1)
 pin10 = Pin.create!(name: "single swan", description: "real swan?", image_url: "https://s-media-cache-ak0.pinimg.com/564x/51/82/0a/51820a25d9d105138e6e97a6fe4f3c66.jpg", user_id: 1)
-pin11 = Pin.create!(name: "cloudy mountains", description: "mysterious and majestic", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495237546/photo-1469053913977-1d2f009670d9_g55xsg.jpg", user_id: 1)
+pin11 = Pin.create!(name: "cloudy mountains", description: "mysterious and majestic", image_url: "https://res.cloudinary.com/dbmxr3ior/image/upload/v1495237546/photo-1469053913977-1d2f009670d9_g55xsg.jpg", user_id: 1)
 pin12 = Pin.create!(name: "Snowy Owl", description: "Hoot hoot!", image_url: "https://s-media-cache-ak0.pinimg.com/originals/a9/48/ac/a948ace51e9afcdd0b0e1332c32eea9b.gif", user_id: 1)
 pin13 = Pin.create!(name: "Starry Night", description: "By the sea", image_url: "https://s-media-cache-ak0.pinimg.com/564x/df/bf/1f/dfbf1fd24542969adcbc25ac3c75086e.jpg", user_id: 1)
 

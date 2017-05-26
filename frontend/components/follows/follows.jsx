@@ -1,18 +1,27 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 const Follows = (props) => {
   let followList = props.location.pathname.split('/');
   let follows = followList[followList.length - 1] === "followers" ?
   props.followers : props.followings;
   return (
-    <div className="follows-container">
+    <ul className="follows-container">
       {
         follows.map( (follow) => {
-          return (<li key={follow.id}>{follow.image_url}{follow.username}{follow.id}</li>);
+          return (
+            <Link to={`/users/${follow.id}`}>
+              <li className="follows-item" key={follow.id}>
+                <img className="follows-thumbnail"
+                  src={follow.image_url}
+                  alt={follow.username}></img>
+                {follow.username}
+              </li>
+            </Link>
+          );
         })
       }
-    </div>
+    </ul>
   );
 };
 

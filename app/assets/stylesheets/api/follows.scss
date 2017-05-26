@@ -5,7 +5,7 @@
 .follow-button {
   color: $light-gray;
   background: $logo-red;
-  border-radius: 10%;
+  border-radius: 5%;
   width: 100px;
   height: 30px;
 }
@@ -13,7 +13,30 @@
 .unfollow-button {
   color: $dark-gray;
   background: $light-gray;
-  border-radius: 10%;
+  border-radius: 5%;
   width: 100px;
   height: 30px;
+}
+
+.follows-container {
+  align-self: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding: 35px;
+}
+
+.follows-item {
+  margin: 15px;
+  height: 180px;
+  width: 150px;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.follows-thumbnail {
+  border-radius: 50%;
+  height: 150px;
+  object-fit: cover;
 }
