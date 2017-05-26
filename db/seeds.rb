@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-user1 = User.create!(username: "guest", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495485323/vhvr5jwtjouuzujpfzwh.png", description: "What's up, dog?")
+user1 = User.create!(username: "guest", password: "password", image_url: "https://res.cloudinary.com/dbmxr3ior/image/upload/v1495784002/logrr8l6xm8dbstsmh0y.jpg", description: "What's up, dog?")
 user2 = User.create!(username: "yong", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/v1495351916/nrztsokinadfklw0sbuo.jpg", description: "Hire me!")
 user3 = User.create!(username: "dallas", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/c_scale,w_877/v1495487377/dmbw7lomx2reu9bz4c03.jpg", description: "Commander")
 user4 = User.create!(username: "sam", password: "password", image_url: "http://res.cloudinary.com/dbmxr3ior/image/upload/c_scale,w_877/v1495487377/dmbw7lomx2reu9bz4c03.jpg", description: "aperture")

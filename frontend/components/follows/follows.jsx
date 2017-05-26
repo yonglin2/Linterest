@@ -9,7 +9,7 @@ const Follows = (props) => {
     <div className="follows-container">
       {
         follows.map( (follow) => {
-          return (<li>{follow.image_url}{follow.username}</li>);
+          return (<li key={follow.id}>{follow.image_url}{follow.username}{follow.id}</li>);
         })
       }
     </div>

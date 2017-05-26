@@ -8,9 +8,7 @@ import {
 import { RECEIVE_BOARD, DELETE_BOARD } from '../actions/board_actions';
 
 const nullUser = Object.freeze({
-  currentUser: {
-    boards: {}
-  },
+  currentUser: null,
   errors: []
 });
 
