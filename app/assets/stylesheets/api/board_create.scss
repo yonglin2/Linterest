@@ -1,0 +1,38 @@
+.board-create-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: $dark-gray;
+  width: 50%;
+}
+
+.board-create-form h2 {
+  color: $dark-gray;
+  font-size: 20px;
+}
+
+.board-create-form input {
+  margin-top: 10px;
+  padding-left: 10px;
+  height: 33px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 13px;
+  background-color: $light-gray;
+  outline: none;
+  border-radius: 3px;
+}
+
+input::placeholder {
+  color: $gray;
+}
+
+.board-create-form input[type="submit"] {
+  background: $logo-red;
+  color: white;
+  border-radius: 3px;
+  font-size: 15px;
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  color: $dark-gray;
+  color: $gray;
   background: $light-gray;
   background-size: cover;
   width: 350px;
@@ -36,6 +36,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .create-form h2 {
   color: $dark-gray;
   font-size: 20px;

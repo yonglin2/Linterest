@@ -27,19 +27,18 @@ class BoardCreateForm extends React.Component{
 
   render() {
     return (
-      <form>
+      <form className="board-create-form">
         <label>
-          <h2>Title</h2>
+          <h2 className="board-create-form-h2">Title</h2>
           <input type="text"
-            placeholder="Board title"
+            placeholder="e.g. Photos"
             onChange={this.update('title')}>
           </input>
         </label>
 
         <label>
-          <h2>Description</h2>
+          <h2 className="board-create-form-h2">Description</h2>
           <input type="text"
-            placeholder="Board description"
             onChange={this.update('description')}></input>
         </label>
 
