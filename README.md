@@ -59,16 +59,13 @@ An user can add a pin to their collection, which are categorized by 'boards'. A 
 #### Modals
 A pin's show page is opened in a modal for a better view of the image in a pin. It's done using [React Modal](https://github.com/reactjs/react-modal). From the modal, you can click on the user profile picture to go to the user who uploaded the pin.
 
-![Pin Modal](docs/screencaps/pin_show_and_follows.gif)
-
+![Pin Modal](docs/screencaps/pinning_and_follows.gif)
 
 #### Drag and Drop upload
 Users can upload images via drag'n'drop or by clicking in the zone, with [react-dropzone](https://github.com/okonet/react-dropzone).
 
 #### User Profiles and Follows
 User's profile provides a live view of their boards, pins, followers and followings. Following a user adds the current user to the user's follower list instantly.
-
-![userprofile](./docs/screenshots/userprofile.png)
 
 ## Future Features
 
