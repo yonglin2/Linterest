@@ -13,7 +13,6 @@ const mapStateToProps = (state, ownProps) => ({
   followings: selectUserData(state.user.followings)
 });
 
-
 const mapDispatchToProps = (dispatch) => ({
   fetchUser: (userId) => dispatch(fetchUser(userId))
 });

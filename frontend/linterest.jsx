@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TODO: remove after testing
-import { createFollow, deleteFollow } from './util/follow_api_util';
-
-window.createFollow = createFollow;
-window.deleteFollow = deleteFollow;
-
-// import { createFollow, deleteFollow } from './actions/follow_actions';
+// import { createFollow, deleteFollow } from './util/follow_api_util';
 //
 // window.createFollow = createFollow;
 // window.deleteFollow = deleteFollow;
+
+import { createFollow, deleteFollow } from './actions/follow_actions';
+
+window.createFollow = createFollow;
+window.deleteFollow = deleteFollow;

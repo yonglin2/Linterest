@@ -22,8 +22,10 @@ const UserReducer = (state = defaultUser, action) => {
     case RECEIVE_USER:
       return merge({}, action.user);
     case RECEIVE_FOLLOW:
+      // Object.assign({}, state, { followed: true });
       return merge({}, state, { followed: true } );
     case REMOVE_FOLLOW:
+      // Object.assign({}, state, { followed: false });
       return merge({}, state, { followed: false } );
     default:
       return state;

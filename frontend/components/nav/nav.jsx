@@ -18,7 +18,7 @@ class Nav extends React.Component {
           </div>
           <div className="mid-nav">
             <h2 className="nav-greeting">
-              Hi, {currentUser.username}!
+              Hi, {currentUser.username}{currentUser.id}!
             </h2>
           </div>
           <div className="right-nav">

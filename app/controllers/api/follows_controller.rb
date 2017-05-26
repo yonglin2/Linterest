@@ -10,8 +10,8 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
-    @follow = Follow.find_by(follow_params[:follower_id],
-                            follow_params[:following_id])
+    @follow = Follow.where(follower_id: params[:follow][:follower_id],
+                  following_id: params[:follow][:following_id]).first
     if @follow.destroy
       render :show
     else

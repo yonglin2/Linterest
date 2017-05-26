@@ -1,13 +1,14 @@
 class CreateFollows < ActiveRecord::Migration[5.0]
   def change
     create_table :follows do |t|
-      t.integer :follower_id
-      t.integer :following_id
+      t.integer :following_id, null: false
+      t.integer :follower_id, null: false
 
       t.timestamps
-
-      t.index :follower_id
-      t.index :following_id
     end
+
+    add_index :follows, :follower_id
+    add_index :follows, :following_id
+    add_index :follows, [:following_id, :follower_id], unique: true
   end
 end

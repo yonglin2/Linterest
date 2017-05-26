@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Link, withRouter } from 'react-router-dom';
 import { ProtectedRoute } from '../../util/route_util';
+import FollowContainer from '../follows/follow_container';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class UserProfile extends React.Component {
           <span className="user-description">{user.description}</span>
           <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
           <div><button className="user fa fa-pencil"></button></div>
+          <FollowContainer></FollowContainer>
         </div>
 
         <div className="user-profile-bottom">
