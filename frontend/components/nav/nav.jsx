@@ -12,8 +12,8 @@ class Nav extends React.Component {
     return(
         <nav className="nav-bar">
           <div className="left-nav">
-            <Link to="/">
-              <i className="fa fa-pinterest nav-logo" aria-hidden="true"></i>
+            <Link className="nav-logo-container" to="/">
+              <h1 className="nav-logo"> L</h1>
             </Link>
           </div>
           <div className="mid-nav">

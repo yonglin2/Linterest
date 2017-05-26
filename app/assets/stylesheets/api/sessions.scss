@@ -34,9 +34,21 @@
   justify-content: center;
 }
 
-.fa.fa-pinterest {
-  color: $logo-red;
-  font-size: 50px;
+.login-logo-container{
+  background: $logo-red;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.login-logo {
+  position: relative;
+  top: 6px;
+  left: 9px;
+  font-size: 30px;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 700;
+  color: white;
 }
 
 .login-welcome {
