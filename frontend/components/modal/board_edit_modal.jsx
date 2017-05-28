@@ -13,8 +13,10 @@ const style = {
     zIndex          : 10
   },
   content : {
+    height          : '300px',
     display         : 'flex',
     justifyContent  : 'center',
+    top             : '30%',
     left            : '35%',
     right           : '35%',
     border          : '1px solid #ccc',

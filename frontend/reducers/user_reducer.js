@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 import { RECEIVE_USER } from '../actions/user_actions';
 import { RECEIVE_FOLLOW, REMOVE_FOLLOW } from '../actions/follow_actions';
 import { LOGOUT_USER } from '../actions/session_actions';
+import { RECEIVE_BOARD } from '../actions/board_actions';
 
 const defaultUser = Object.freeze({
   id: null,
@@ -22,8 +23,15 @@ const UserReducer = (state = defaultUser, action) => {
   switch(action.type) {
     case RECEIVE_USER:
       return merge({}, action.user);
+    case RECEIVE_BOARD:
+      let newState = merge({}, state);
+      if (!newState.boards) {
+        newState.boards = {};
+      }
+      newState.boards[action.board.id] = action.board;
+      return newState;
     case RECEIVE_FOLLOW:
-      let newState = merge({}, state, { followed: true } );
+      newState = merge({}, state, { followed: true } );
       if (!newState.followers) {
         newState.followers = {};
       }

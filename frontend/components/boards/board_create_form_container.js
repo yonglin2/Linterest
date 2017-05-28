@@ -16,3 +16,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(BoardCreateForm);
+
+// TODO: delete fetchUser

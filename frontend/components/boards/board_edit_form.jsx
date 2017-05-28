@@ -22,9 +22,9 @@ class BoardEditForm extends React.Component{
 
   render() {
     return (
-      <form>
+      <form className="board-form">
         <label>
-          <h2>Title</h2>
+          <h2 className="board-form-h2">Title</h2>
           <input type="text"
             value={this.state.title}
             onChange={this.update('title')}>
@@ -32,7 +32,7 @@ class BoardEditForm extends React.Component{
 
         </label>
         <label>
-          <h2>Description</h2>
+          <h2 className="board-form-h2">Description</h2>
           <input type="text"
             value={this.state.description}
             onChange={this.update('description')}></input>

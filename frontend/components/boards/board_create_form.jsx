@@ -21,15 +21,14 @@ class BoardCreateForm extends React.Component{
   handleSubmit(e) {
     e.preventDefault();
     this.props.createBoard(this.state);
-    this.props.fetchUser(this.props.currentUser.id);
     this.props.closeModal();
   }
 
   render() {
     return (
-      <form className="board-create-form">
+      <form className="board-form">
         <label>
-          <h2 className="board-create-form-h2">Title</h2>
+          <h2 className="board-form-h2">Title</h2>
           <input type="text"
             placeholder="e.g. Photos"
             onChange={this.update('title')}>
@@ -37,7 +36,7 @@ class BoardCreateForm extends React.Component{
         </label>
 
         <label>
-          <h2 className="board-create-form-h2">Description</h2>
+          <h2 className="board-form-h2">Description</h2>
           <input type="text"
             onChange={this.update('description')}></input>
         </label>

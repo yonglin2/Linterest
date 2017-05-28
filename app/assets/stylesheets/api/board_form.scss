@@ -1,4 +1,4 @@
-.board-create-form {
+.board-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -6,12 +6,12 @@
   width: 50%;
 }
 
-.board-create-form h2 {
+.board-form h2 {
   color: $dark-gray;
   font-size: 20px;
 }
 
-.board-create-form input {
+.board-form input {
   margin-top: 10px;
   padding-left: 10px;
   height: 33px;
@@ -27,7 +27,7 @@ input::placeholder {
   color: $gray;
 }
 
-.board-create-form input[type="submit"] {
+.board-form input[type="submit"] {
   background: $logo-red;
   color: white;
   border-radius: 3px;
