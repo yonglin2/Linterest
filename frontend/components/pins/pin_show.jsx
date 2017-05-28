@@ -28,6 +28,7 @@ class PinShow extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createPinning(this.state);
+    this.props.closeModal();
   }
 
   render() {

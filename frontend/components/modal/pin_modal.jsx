@@ -65,7 +65,9 @@ class PinModal extends React.Component {
           style = {style}
           contentLabel="Pin Modal">
 
-          <PinShowContainer className='pin_show_container' id={pin.id} />
+          <PinShowContainer className='pin_show_container'
+            closeModal={this.closeModal}
+            id={pin.id} />
         </Modal>
       </div>
     );
