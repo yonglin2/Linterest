@@ -14,16 +14,26 @@
 }
 
 .user-profile-top {
-  width: inherit;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
 }
 
+.user-profile-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.user-profile-username{
+  font-size: 30px;
+  color: $dark-gray;
+  font-weight: bold;
+}
+
 .user-description {
   font-size: 20px;
-  display: flex;
-  align-items: center;
   color: $dark-gray;
 }
 

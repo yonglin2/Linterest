@@ -24,7 +24,10 @@ class UserProfile extends React.Component {
     return (
       <section className="user-profile-container">
         <div className="user-profile-top">
-          <span className="user-description">{user.description}</span>
+          <div className="user-profile-info-container">
+            <h1 className="user-profile-username">{user.username}</h1>
+            <p className="user-description">{user.description}</p>
+          </div>
           <img className="user-profile-pic" src={user.image_url} alt="user-profile-pic"></img>
           <FollowContainer></FollowContainer>
         </div>
