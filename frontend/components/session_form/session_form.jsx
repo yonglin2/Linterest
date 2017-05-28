@@ -92,12 +92,12 @@ class SessionForm extends React.Component {
                 {this.renderErrors()}
               </span>
             <div className="session-button-container">
-              <button className="session-button"
-                onClick={this.handleGuestSubmit}>Demo</button>
               <input className="session-button"
                 type="submit"
                 value={this.capitalize(this.props.formType)}
-              />
+                />
+              <button className="session-button"
+                onClick={this.handleGuestSubmit}>Demo</button>
             </div>
               <span className="navLink">
                 { this.navLink() }
