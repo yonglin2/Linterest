@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
-  # TODO: comment back in
-  # protect_from_forgery with: :exception
+  protect_from_forgery with: :exception
   helper_method :current_user, :logged_in?
 
   private

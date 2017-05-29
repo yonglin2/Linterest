@@ -6,7 +6,7 @@ import FollowContainer from '../follows/follow_container';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-    // TODO: <div><button className="user fa fa-pencil"></button></div>
+    // <div><button className="user fa fa-pencil"></button></div>
   }
 
   componentDidMount() {

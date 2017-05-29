@@ -8,13 +8,10 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  createBoard: (board) => dispatch(createBoard(board)),
-  fetchUser: (userId) => dispatch(fetchUser(userId))
+  createBoard: (board) => dispatch(createBoard(board))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(BoardCreateForm);
-
-// TODO: delete fetchUser

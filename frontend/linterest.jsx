@@ -18,14 +18,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
-
-// TODO: remove after testing
-// import { createFollow, deleteFollow } from './util/follow_api_util';
-//
-// window.createFollow = createFollow;
-// window.deleteFollow = deleteFollow;
-
-import { createFollow, deleteFollow } from './actions/follow_actions';
-
-window.createFollow = createFollow;
-window.deleteFollow = deleteFollow;
