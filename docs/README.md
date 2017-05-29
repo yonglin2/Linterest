@@ -2,11 +2,9 @@
 
 ## Live Demo
 
-* [Heroku Link][heroku]
-* [Trello Link][trello]
+* [Live Site][live]
 
-[heroku]: https://linterest.herokuapp.com/
-[trello]: https://trello.com/b/fcO5rEb5/linterest
+[live]: https://linterest.life/
 
 Linterest is a web app inspired by Pinterest built with React/Redux and Ruby on Rails. Its MVPs are:
 - [ ] Hosting on Heroku

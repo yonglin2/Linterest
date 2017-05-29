@@ -2,7 +2,7 @@
 
 [Live site][Linterest]
 
-[Linterest]: https://linterest.herokuapp.com/
+[Linterest]: https://linterest.life/
 
 Linterest is inspired by Pinterest and built using Ruby on Rails and React/Redux.
 
