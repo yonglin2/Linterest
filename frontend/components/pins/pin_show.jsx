@@ -60,6 +60,7 @@ class PinShow extends React.Component {
           <h2 className='pin-show-title'>{pinDetail.name}</h2>
           <Link to={`/users/${pinDetail.user_id}`} className="pin-show-user-link">
             <img className='pin-show-user-img' src={pinDetail.creator_image_url} alt="creator pic"></img>
+            <h3>Uploaded by: {pinDetail.creator_username}</h3>
           </Link>
         </div>
 
