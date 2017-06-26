@@ -38,21 +38,28 @@
   justify-content: space-between;
   align-items: center;
   width: 70%;
-  margin: 20px;
+  margin: 10px;
 }
-
+.pin-show-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .pin-show-user-img {
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
 }
-//
+.pin-show-username {
+  color: $gray;
+}
 .pin-show-title{
   font-size: 25px;
   font-weight: bold;
-  color: $gray;
+  color: $dark-gray;
 }
-//
+
 .pin-show-img-container {
   display: flex;
   flex-direction: column;
