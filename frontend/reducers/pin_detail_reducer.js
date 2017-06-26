@@ -4,6 +4,7 @@ import { LOGOUT_USER } from '../actions/session_actions';
 
 const _initialState = {
   id: 0,
+  creator_image_url: "",
   name: "",
   description: "",
   image_url: ""

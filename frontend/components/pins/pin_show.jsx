@@ -14,7 +14,7 @@ class PinShow extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.requestSinglePin(this.props.id);
   }
 
