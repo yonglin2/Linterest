@@ -5,7 +5,7 @@ import { selectAllPins, randomizeAllPins } from '../../reducers/selectors';
 import PinsIndex from './pins_index';
 
 const mapStateToProps = ({ pins }) => ({
-  pins: randomizeAllPins(pins)
+  pins: selectAllPins(pins)
 });
 
 const mapDispatchToProps = dispatch => ({
