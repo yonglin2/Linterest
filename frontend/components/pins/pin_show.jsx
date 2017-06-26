@@ -17,7 +17,9 @@ class PinShow extends React.Component {
   componentWillMount() {
     this.props.requestSinglePin(this.props.id);
   }
-
+  componentWillUnmount() {
+    this.props.clearPin();
+  }
   handleChooseBoard(e) {
     e.preventDefault();
     this.setState({
@@ -32,6 +34,7 @@ class PinShow extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     let { pinDetail, currentBoards, pinned_boards } = this.props;
     return (
       <section className="pin-show-container">

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { requestSinglePin } from '../../actions/pin_actions';
+import { requestSinglePin, clearPin } from '../../actions/pin_actions';
 import { fetchUser } from '../../actions/user_actions';
 import { createPinning } from '../../actions/pinning_actions';
 import { selectUserData } from '../../reducers/selectors';
@@ -14,7 +14,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   requestSinglePin: (id) => dispatch(requestSinglePin(id)),
-  createPinning: (pinning) => dispatch(createPinning(pinning))
+  createPinning: (pinning) => dispatch(createPinning(pinning)),
+  clearPin: () => dispatch(clearPin())
 });
 
 export default connect(

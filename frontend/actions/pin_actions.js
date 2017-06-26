@@ -2,6 +2,7 @@ import * as APIUtil from '../util/pin_api_util';
 
 export const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS";
 export const RECEIVE_SINGLE_PIN = "RECEIVE_SINGLE_PIN";
+export const CLEAR_PIN = "CLEAR_PIN";
 
 export const receiveAllPins = (pins) => ({
   type: RECEIVE_ALL_PINS,
@@ -11,6 +12,10 @@ export const receiveAllPins = (pins) => ({
 export const receiveSinglePin = (pin) => ({
   type: RECEIVE_SINGLE_PIN,
   pin
+});
+
+export const clearPin = () => ({
+  type: CLEAR_PIN
 });
 
 export const requestAllPins = () => (dispatch) => {

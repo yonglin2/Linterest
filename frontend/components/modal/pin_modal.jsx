@@ -50,6 +50,7 @@ class PinModal extends React.Component {
   }
 
   render() {
+    // console.log(this.props);
     let { pin } = this.props;
     return(
       <div>
