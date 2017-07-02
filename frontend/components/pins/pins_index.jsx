@@ -2,6 +2,7 @@ import React from 'react';
 // import PinsIndexItem from './pins_index_item';
 import Masonry from 'react-masonry-component';
 import PinModal from '../modal/pin_modal';
+import InfiniteScroll from 'react-infinite-scroller';
 
 class PinsIndex extends React.Component {
   constructor(props) {
