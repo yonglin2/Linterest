@@ -9,7 +9,8 @@ class PinsIndex extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
+    console.log('sup baby');
     this.props.requestAllPins();
   }
 
