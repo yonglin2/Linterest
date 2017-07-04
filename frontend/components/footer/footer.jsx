@@ -11,14 +11,14 @@ class Footer extends React.Component {
       <footer className="footer-main">
         <PinCreateModal />
         <div>
-          <a href="https://github.com/lynilir/Linterest">
+          <a href="https://github.com/yonglin2/Linterest">
             <button className="fa fa-github"
               aria-hidden="true">
             </button>
           </a>
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/yong-lin-565a5220">
+          <a href="https://www.linkedin.com/in/yong-lin">
             <button className="fa fa-linkedin"
               aria-hidden="true">
             </button>

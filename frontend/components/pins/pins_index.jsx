@@ -7,11 +7,18 @@ import InfiniteScroll from 'react-infinite-scroller';
 class PinsIndex extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      loading: true
+    };
   }
 
   componentWillMount() {
-    console.log('sup baby');
     this.props.requestAllPins();
+  }
+
+  componentDidMount() {
+    this.setState({ loading: false });
   }
 
   render() {
@@ -21,6 +28,11 @@ class PinsIndex extends React.Component {
       gutter: 25,
       fitWidth: true
     };
+    const { loading } = this.state;
+
+    if(loading) {
+      return null; // render null when app is not ready
+    }
     return (
       <Masonry className={"pins-index-container"}
         elementType={'ul'}
