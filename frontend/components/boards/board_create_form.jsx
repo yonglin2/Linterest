@@ -40,7 +40,7 @@ class BoardCreateForm extends React.Component{
           <input type="text"
             onChange={this.update('description')}></input>
         </label>
-
+        <div></div>
         <input type="submit" onClick={this.handleSubmit}></input>
       </form>
     );
